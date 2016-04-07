@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Sensitive files
+settings.py
+
 # C extensions
 *.so
 
