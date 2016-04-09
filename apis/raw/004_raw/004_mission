@@ -1,0 +1,31 @@
+004_mission
+#####################################################################
+# INFOS
+#####################################################################
+Le fichier src comporte une extraction de la page :
+http://www.italianames.com/most_common.php
+Ce sont les prénoms les plus communs en Italie.
+
+#####################################################################
+# OBJECTIF
+#####################################################################
+Extraire les prénoms dans deux fichiers différents 
+	(masculins/féminins) et éliminer les informations superflues.
+
+- Un seul nom par ligne, sans en-tête
+
+- Une seule majuscule à chaque composant du nom
+	Ex: Firenze , Monta-Albano
+
+
+#####################################################################
+# REGLES GENERALES
+#####################################################################
+
+- Le processus de raffinage ne doit pas altérer le fichier source
+
+- Tous les scripts de nettoyage doivent être dans le dossier ###_raw 
+	et si possible les commenter pour réutilisation
+
+-- Les fichiers de donnée raffinée doivent être placés dans
+	/home/common/shade/apis/out/

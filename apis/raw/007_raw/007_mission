@@ -1,0 +1,39 @@
+005_mission
+#####################################################################
+# INFOS
+#####################################################################
+Le fichier src comporte une extraction de la page :
+http://www.tuttomio.it/cgi-bin/nomi.cgi
+Ce sont des prénoms masculins, féminins et pas forcément
+	à consonnace italienne. C'est un fichier volumineux
+	mais très sale ! :]
+
+#####################################################################
+# OBJECTIF
+#####################################################################
+Extraire les prénoms et les différencier (H/F):
+
+- Utiliser des règles simples pour faire le plus gros du travail
+	de différenciation H/F : les prénoms finissant par A sont
+	féminins par exemple. 
+
+- Eliminer les prénoms àlakon (ex : RA'IPOIA) en éliminant tous 
+	les prénoms comportant une apostrophe.
+
+- Eliminer les prénoms à consonnance non italienne (à la main)
+
+- Une seule majuscule à chaque composant du nom
+	Ex: Firenze , Monta-Albano
+
+
+#####################################################################
+# REGLES GENERALES
+#####################################################################
+
+- Le processus de raffinage ne doit pas altérer le fichier source
+
+- Tous les scripts de nettoyage doivent être dans le dossier ###_raw 
+	et si possible les commenter pour réutilisation
+
+- Les fichiers de donnée raffinée doivent être placés dans
+	/home/common/shade/apis/out/

@@ -1,0 +1,75 @@
+Log des missions d'apis
+
+Ce fichier permet de suivre le travail d'ouvrière pour raffiner la donnée :)
+A consulter avant de se lancer dans une session de raffinage.
+A modifier religieusement après la session !
+
+~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~
+1. Tableau des statuts de mission
+~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~
+
+Statut :
+	A faire / En cours (qui s'en occupe) / Accomplie
+Utilisation du fichier out par primus :
+	Non utilisé / Utilisé
+
+N°      Statut					Utilisation
+-----+------------------------+--------------+
+001		Accomplie				Non utilisé
+-----+------------------------+--------------+
+002		A faire					Non utilisé
+-----+------------------------+--------------+
+003		A faire					Non utilisé
+-----+------------------------+--------------+
+004		A faire					Non utilisé
+-----+------------------------+--------------+
+005		A faire					Non utilisé
+-----+------------------------+--------------+
+006		A faire					Non utilisé
+-----+------------------------+--------------+
+007		A faire					Non utilisé
+-----+------------------------+--------------+
+008		A faire					Non utilisé
+-----+------------------------+--------------+
+009		A faire					Non utilisé
+-----+------------------------+--------------+
+010    (Attendre primus)		Non utilisé
+-----+------------------------+--------------+
+
+~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~
+2. Main courante pour informations importantes
+~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~
+Ici rajouter les informations sur les fonctions ajoutées, modifiées,
+	ou sur toute autre information intéressante.
+Placer l'information la plus récente en haut !
+
+~.~.~.~.~.~.~.~.~.~.~.~.
+2016/04/09
+	J'ai cassé OutFileCreate :
+		Le log arrive bien plein mais le fichier log est vide.
+		A éclaircir !
+	EDIT : FIXED
+	J'ai cassé AddLog : 
+		Le log commence par une grosse ligne de plein d'espaces...
+		wut
+		EDIT : FIXED
+~.~.~.~.~.~.~.~.~.~.~.~.
+	
+~.~.~.~.~.~.~.~.~.~.~.~.
+2016/04/08
+	Fini la mission 001
+	Pas mal amélioré les fonctions génériques
+	Faut trouver un moyen que les AddLog de OutFileCreate
+		fassent partie du log final !! Je bloque.
+~.~.~.~.~.~.~.~.~.~.~.~.
+
+~.~.~.~.~.~.~.~.~.~.~.~.
+2016/04/07 - Sighill
+	J'ai créé 8 dossiers de mission. Il ne faut pas hésiter à 
+		modifier le template de mission à ta guise, c'est à discuter.
+	Je crée un script python dans /shade/apis/voca.py 
+		pour rassembler des	fonctions et des infos utiles.
+	Voca veut dire 'contremaitre', qui dirige les ouvriers dans leur 
+		travail.
+	Je commence à bosser sur la 1ère mission ! 
+~.~.~.~.~.~.~.~.~.~.~.~.

@@ -1,0 +1,24 @@
+010_mission
+#####################################################################
+# INFOS
+#####################################################################
+Le fichier comporte une reconnaissance optique d'un PNJ de shade.
+
+
+#####################################################################
+# OBJECTIF
+#####################################################################
+Extraire la donnée et la mettre en forme pour une insertion dans
+plusieurs tables PNJ. CF primus.
+
+#####################################################################
+# REGLES GENERALES
+#####################################################################
+
+- Le processus de raffinage ne doit pas altérer le fichier source
+
+- Tous les scripts de nettoyage doivent être dans le dossier ###_raw 
+	et si possible les commenter pour réutilisation
+
+- Les fichiers de donnée raffinée doivent être placés dans
+	/home/common/shade/apis/out/

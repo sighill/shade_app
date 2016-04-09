@@ -1,0 +1,37 @@
+﻿009_mission
+#####################################################################
+# INFOS
+#####################################################################
+Le fichier comporte un copier coller de plusieurs pages wikipedia
+sur les canaux et ponts de Clémence.
+Il faut extraire ici les ponts et les canaux dans deux fichiers
+différents.
+Piste : utiliser le début de ligne en reconnaissant les caractères
+Soit ça commence par ponte, soit par rio. Et faut virer les lignes
+parasites.
+
+#####################################################################
+# OBJECTIF
+#####################################################################
+Extraire la donnée et mettre en forme les 
+strings de nom de communes selon les règles :
+
+- Un seul nom par ligne, sans en-tête
+
+- Une seule majuscule à chaque composant du nom
+	Ex: Firenze , Monta-Albano en gardant Ponte et Rio
+	Alternative : ne garder que le nom propre en enlevant Rio et
+	Ponte (possibilité de créer ###_out_alt pour ça)
+
+
+#####################################################################
+# REGLES GENERALES
+#####################################################################
+
+- Le processus de raffinage ne doit pas altérer le fichier source
+
+- Tous les scripts de nettoyage doivent être dans le dossier ###_raw 
+	et si possible les commenter pour réutilisation
+
+- Les fichiers de donnée raffinée doivent être placés dans
+	/home/common/shade/apis/out/

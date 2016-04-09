@@ -1,0 +1,34 @@
+008_mission
+#####################################################################
+# INFOS
+#####################################################################
+Le fichier src comporte une extraction de la page :
+http://www.gens.info/italia/it/nomi?nom_action=a&nom_l=A
+Ce sont des prénoms masculins, féminins non différenciés
+
+#####################################################################
+# OBJECTIF
+#####################################################################
+Extraire les prénoms et les différencier (H/F):
+
+- Utiliser des règles simples pour faire le plus gros du travail
+	de différenciation H/F : les prénoms finissant par A sont
+	féminins par exemple. 
+
+- Un seul nom par ligne, sans en-tête
+
+- Une seule majuscule à chaque composant du nom
+	Ex: Firenze , Monta-Albano
+
+
+#####################################################################
+# REGLES GENERALES
+#####################################################################
+
+- Le processus de raffinage ne doit pas altérer le fichier source
+
+- Tous les scripts de nettoyage doivent être dans le dossier ###_raw 
+	et si possible les commenter pour réutilisation
+
+- Les fichiers de donnée raffinée doivent être placés dans un dossier
+	nommé ###_output à coté de ###_raw

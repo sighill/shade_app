@@ -1,0 +1,32 @@
+001_mission
+#####################################################################
+# INFOS
+#####################################################################
+Le fichier intéressant est le .dbf qui contient simplement les noms 
+de communautés d'une région.
+Source :
+http://www.dati.gov.it/dataset?search_api_views_fulltext=comuni&sort_by=changed&f[0]=field_focus%3A12
+
+#####################################################################
+# OBJECTIF
+#####################################################################
+Extraire la donnée et mettre en forme les 
+strings de nom de communes selon les règles :
+
+- Un seul nom par ligne, sans en-tête
+
+- Une seule majuscule à chaque composant du nom
+	Ex: Firenze , Monta-Albano
+
+
+#####################################################################
+# REGLES GENERALES
+#####################################################################
+
+- Le processus de raffinage ne doit pas altérer le fichier source
+
+- Tous les scripts de nettoyage doivent être dans le dossier ###_raw 
+	et si possible les commenter pour réutilisation
+
+- Les fichiers de donnée raffinée doivent être placés dans
+	/home/common/shade/apis/out/
