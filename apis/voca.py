@@ -22,9 +22,6 @@ log = ''
 
 #####################################################################
 def WorkPath():
-    # TODO : remplacer le snippet de travail en dossiers relatifs
-    #   de voca.py par cette fonction qui détecte automatiquement
-    #   le dossier de travail !
     """
         WorkPath 2016.04.09
         L'utilisation de cette fonction permet d'utiliser des 
@@ -34,11 +31,13 @@ def WorkPath():
             Soit sur un pc en travail local
             Soit sur le serveur avec le shell Django
     """
-
+    # TODO : remplacer le snippet de travail en dossiers relatifs
+    #   de voca.py par cette fonction qui détecte automatiquement
+    #   le dossier de travail !
 
 def AddLog(log_level , str_to_add):
     """
-        Addlog 2016.04.08
+        AddLog 2016.04.08
         Cette fonction gère l'ajout d'une ligne à un compte rendu
         Elle gère aussi l'ajout de brackets HTML pour la mise en 
         forme du log au niveau du template django
@@ -52,7 +51,7 @@ def AddLog(log_level , str_to_add):
 
     # If subtitle, 4 space indent, medium separator, and str_to_add
     elif log_level == 'subtitle':
-        log = log + '    ' + separator*35 + '\n' + str_to_add + '\n' 
+        log = log + '    ' + separator*35 + '\n'  + '    ' + str_to_add + '\n' 
 
     # If corpus, 8 spaces indent and str_to_add
     elif log_level == 'corpus':
@@ -67,8 +66,6 @@ def AddLog(log_level , str_to_add):
 
 #####################################################################
 def OutFileCreate(out_path,raw_filename,ref_list):
-    # TODO : fix le log vide en fin de fonction !
-    # TODO : fix le fait que les 2 AddLog ici ne fonctionnent pas
     """
         OutFileCreate 2016.04.08
         Crée les fichiers out et log au bon endroit, et les remplit.
@@ -101,7 +98,6 @@ def OutFileCreate(out_path,raw_filename,ref_list):
 
 #####################################################################
 def StringFormatter(raw_str):
-    # TODO : ajouter des fonctionnalités
     """
         StringFormatter 2016.04.08
         Fonction de modification d'une string de n'importe quel type
@@ -109,6 +105,9 @@ def StringFormatter(raw_str):
         Standard primus : Une majuscule en début de nom. Si nom
             composé, majuscule au début de chaque partie.
     """
+    # TODO : ajouter un convertisseur de caractères spéciaux.
+    # Exemple : ` --> '
+
     # Variables globales
     global log
 
@@ -116,14 +115,12 @@ def StringFormatter(raw_str):
     ref_str = raw_str.title()
 
     # Ecriture du log
-    AddLog( 'corpus' , ref_str)
+    AddLog( 'corpus' , 'String brut : {}. String raffiné : {}.'.format(raw_str , ref_str))
     
     return ref_str
 
 #####################################################################
-def StrValidator(list):
-    # TODO : TESTER ET VALIDER CETTE FONCTION ! PAS LE TEMPS DE LE  
-    #   FAIRE NOW
+def StrValidator(list): # WIP NE PAS UTILISER
     """
         StrValidator 2016.04.09
         Cette fonction permet de valider rapidement chaque entrée
@@ -132,20 +129,57 @@ def StrValidator(list):
             Input vide : validé
             Input non vide : éliminé
     """
+    # TODO : fonction de correction : utiliser while not line_corr_valid_ok
+    #   c'est sale et pas solide. A améliorer ! 
+
     # Variables globales
-    AddLog('title' , 'Début de la fonction StrValidator')
-
+    global log
     # Variables locales
-    ref_list = []
+    out_list = []
+    counter_valid = 0
+    counter_corr = 0
+    counter_eliminated = 0
 
+    print('StrValidator - inputs possibles : \n  Vide : string validé.\n  c : correction manuelle.\n  Tout autre input : string éliminé')
     # Pour chaque ligne de list, prompt et attendre input.
     for line in list:
-        valid = input(line + ' : ')
-        if valid :
-            ref_list.append(line + '\n')
+        # Demande d'input
+        key_input = input(line + ' : ')
+        
+        # Si input vide, string éliminée si pas vide, string gardée
+        if not key_input :
+            out_list.append(line)
+            counter_valid += 1
+
+        # Si correction, input demandé, confirmé, et ajouté.
+        elif key_input in ['c','C']:
+            line_corr_valid_ok = False
+            while not line_corr_valid_ok:
+                line_corr = input('Correction de {}: '.format(line))
+                line_corr_valid = input('Validez vous {} ? o/n : '.format(line_corr))
+                if line_corr_valid in ['o','O','y','Y']:
+                    out_list.append(line_corr_valid)
+                    line_corr_valid_ok = True
+                    counter_corr += 1
+                else:
+                    continue
+        
+        # Si input différent de vide ou 'c', string confirmé et éliminé.
         else:
-            pass
-    return ref_list
+            line_eliminated_valid = input('Eliminer {} ? o/n : '.format(line))
+            if line_eliminated_valid in ['o','O','y','Y']:
+                print('String éliminé.')
+                counter_eliminated += 1
+            else: 
+                print('String validé.')
+                out_list.append(line)
+                counter_valid += 1
+
+    # Ajout du log
+    AddLog('corpus', 'Lignes validées : {}'.format(counter_valid))
+    AddLog('corpus', 'Lignes corrigées : {}'.format(counter_corr))
+    AddLog('corpus', 'Lignes éliminées : {}'.format(counter_eliminated))
+    return out_list
 
 #####################################################################
 # SNIPPETS DE CODE UTILES
