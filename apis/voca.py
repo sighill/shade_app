@@ -115,7 +115,7 @@ def StringFormatter(raw_str):
     ref_str = raw_str.title()
 
     # Ecriture du log
-    AddLog( 'corpus' , 'String brut : {}. String raffiné : {}.'.format(raw_str , ref_str))
+    AddLog( 'corpus' , '{} --> {}.'.format(raw_str , ref_str))
     
     return ref_str
 
@@ -180,6 +180,51 @@ def StrValidator(list): # WIP NE PAS UTILISER
     AddLog('corpus', 'Lignes corrigées : {}'.format(counter_corr))
     AddLog('corpus', 'Lignes éliminées : {}'.format(counter_eliminated))
     return out_list
+
+#####################################################################
+def OdditiesFinder(raw_list):
+    '''
+        OdditiesFinder 2016.04.12
+        Cherche dans la string d'entrée des caractères non prévus
+        et pas acceptables dans la db primus.
+        Chaque ligne (string) est transformée en liste de lettres (list)
+        Chaque lettre est comparée à la liste des lettres acceptées.
+        Si problème, prompt pour avoir la lettre de remplacement
+        Laisser vide pour suppression de la lettre merdique.
+    '''
+    # TODO : tester la fonction avec un insert de plusieurs lettres
+    #   dans le cas d'un remplacement de lettre --> plusieurs lettres
+    # Variables globales
+    global log
+
+    # Variables locales
+    ref_line_list = []
+    acceptable_char = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 
+    'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 
+    'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 
+    'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 
+    'W', 'X', 'Y', 'Z', '\'' , ' ']
+    
+    # Pour chaque ligne, déconstruction lettre par lettre et 
+    #   comparaison de chaque lettre à un dico personnalisé
+    for line in raw_list:
+        # Passage de string à liste de lettres
+        letter_list = list(line)
+        curseur = 0
+        for letter in letter_list:
+            if letter not in acceptable_char:
+                replacement_letter = input('Bizarrerie trouvée : \' {} \' dans \' {} \'. Remplacer par : '.format(letter , line))
+                letter_list[curseur] = replacement_letter
+                AddLog('corpus' , '{} : Modification de la lettre : {} en {}'.format(line , letter , replacement_letter))
+            else:
+                pass
+            curseur += 1
+        # Reconstruction de la string à partir de la liste de lettres
+        line = ''.join(letter_list)
+        #Ajout de la string dans la liste de sortie
+        ref_line_list.append(line)
+        
+    return ref_line_list
 
 #####################################################################
 # SNIPPETS DE CODE UTILES

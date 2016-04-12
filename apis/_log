@@ -17,9 +17,9 @@ N°      Statut					Utilisation
 -----+------------------------+--------------+
 001		Accomplie				Non utilisé
 -----+------------------------+--------------+
-002		A faire					Non utilisé
+002		Accomplie				Non utilisé
 -----+------------------------+--------------+
-003		A faire					Non utilisé
+003		Accomplie				Non utilisé
 -----+------------------------+--------------+
 004		A faire					Non utilisé
 -----+------------------------+--------------+
@@ -44,24 +44,28 @@ Ici rajouter les informations sur les fonctions ajoutées, modifiées,
 Placer l'information la plus récente en haut !
 
 ~.~.~.~.~.~.~.~.~.~.~.~.
-2016/04/09
+2016/04/12 - Sighill
+	J'ai ajouté la fonction OdditiesFinder. Elle est cool !
+		Il manque juste des entrées log pour la clarté.
+		EDIT : addlog ajouté :)
+
+~.~.~.~.~.~.~.~.~.~.~.~.
+2016/04/09 - Sighill
 	J'ai cassé OutFileCreate :
 		Le log arrive bien plein mais le fichier log est vide.
 		A éclaircir !
-	EDIT : FIXED
+		EDIT : FIXED
 	J'ai cassé AddLog : 
 		Le log commence par une grosse ligne de plein d'espaces...
 		wut
 		EDIT : FIXED
-~.~.~.~.~.~.~.~.~.~.~.~.
 	
 ~.~.~.~.~.~.~.~.~.~.~.~.
-2016/04/08
+2016/04/08 - Sighill
 	Fini la mission 001
 	Pas mal amélioré les fonctions génériques
 	Faut trouver un moyen que les AddLog de OutFileCreate
 		fassent partie du log final !! Je bloque.
-~.~.~.~.~.~.~.~.~.~.~.~.
 
 ~.~.~.~.~.~.~.~.~.~.~.~.
 2016/04/07 - Sighill
@@ -72,4 +76,3 @@ Placer l'information la plus récente en haut !
 	Voca veut dire 'contremaitre', qui dirige les ouvriers dans leur 
 		travail.
 	Je commence à bosser sur la 1ère mission ! 
-~.~.~.~.~.~.~.~.~.~.~.~.

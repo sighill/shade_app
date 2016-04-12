@@ -1,59 +1,361 @@
-E
-c
-h
-a
-n
-t
-i
-l
-l
-o
-n
- 
-d
-e
- 
-l
-i
-g
-n
-e
-s
- 
-d
-u
- 
-f
-i
-c
-h
-i
-e
-r
- 
-s
-r
-c
- 
-:
- 
-C
-A
-S
-T
-E
-L
- 
-S
-A
-N
- 
-G
-I
-O
-V
-A
-N
-N
-I
- 
+######################################################################
+Début du nettoyage du fichier
+    ###################################
+    Début de la fonction StringFormatter
+        String brut : CASTEL SAN GIOVANNI. String raffiné : Castel San Giovanni.
+        String brut : SERRAMAZZONI. String raffiné : Serramazzoni.
+        String brut : VIANO. String raffiné : Viano.
+        String brut : FABBRICO. String raffiné : Fabbrico.
+        String brut : BORGHI. String raffiné : Borghi.
+        String brut : MONTIANO. String raffiné : Montiano.
+        String brut : MIRANDOLA. String raffiné : Mirandola.
+        String brut : FAENZA. String raffiné : Faenza.
+        String brut : SANT`AGATA BOLOGNESE. String raffiné : Sant`Agata Bolognese.
+        String brut : RAVENNA. String raffiné : Ravenna.
+        String brut : CERVIA. String raffiné : Cervia.
+        String brut : PREMILCUORE. String raffiné : Premilcuore.
+        String brut : Pennabilli. String raffiné : Pennabilli.
+        String brut : CASTELVETRO PIACENTINO. String raffiné : Castelvetro Piacentino.
+        String brut : MEDESANO. String raffiné : Medesano.
+        String brut : RONCOFREDDO. String raffiné : Roncofreddo.
+        String brut : MASSA LOMBARDA. String raffiné : Massa Lombarda.
+        String brut : CAMUGNANO. String raffiné : Camugnano.
+        String brut : SOGLIANO AL RUBICONE. String raffiné : Sogliano Al Rubicone.
+        String brut : DOVADOLA. String raffiné : Dovadola.
+        String brut : COMPIANO. String raffiné : Compiano.
+        String brut : GOSSOLENGO. String raffiné : Gossolengo.
+        String brut : SALA BAGANZA. String raffiné : Sala Baganza.
+        String brut : POLESINE PARMENSE. String raffiné : Polesine Parmense.
+        String brut : BORE. String raffiné : Bore.
+        String brut : CAMPOSANTO. String raffiné : Camposanto.
+        String brut : FIUMALBO. String raffiné : Fiumalbo.
+        String brut : VILLA MINOZZO. String raffiné : Villa Minozzo.
+        String brut : PECORARA. String raffiné : Pecorara.
+        String brut : MONGHIDORO. String raffiné : Monghidoro.
+        String brut : LAMA MOCOGNO. String raffiné : Lama Mocogno.
+        String brut : RAVARINO. String raffiné : Ravarino.
+        String brut : CASTELNOVO NE`MONTI. String raffiné : Castelnovo Ne`Monti.
+        String brut : SAVIGNANO SUL RUBICONE. String raffiné : Savignano Sul Rubicone.
+        String brut : RUSSI. String raffiné : Russi.
+        String brut : SANTARCANGELO DI ROMAGNA. String raffiné : Santarcangelo Di Romagna.
+        String brut : CAMPAGNOLA EMILIA. String raffiné : Campagnola Emilia.
+        String brut : SANTA SOFIA. String raffiné : Santa Sofia.
+        String brut : SAN PIETRO IN CASALE. String raffiné : San Pietro In Casale.
+        String brut : MELDOLA. String raffiné : Meldola.
+        String brut : VERGHERETO. String raffiné : Verghereto.
+        String brut : CAMPOGALLIANO. String raffiné : Campogalliano.
+        String brut : CALDERARA DI RENO. String raffiné : Calderara Di Reno.
+        String brut : LAGOSANTO. String raffiné : Lagosanto.
+        String brut : SOLIERA. String raffiné : Soliera.
+        String brut : PIANELLO VAL TIDONE. String raffiné : Pianello Val Tidone.
+        String brut : POVIGLIO. String raffiné : Poviglio.
+        String brut : CAVRIAGO. String raffiné : Cavriago.
+        String brut : TREDOZIO. String raffiné : Tredozio.
+        String brut : MONDAINO. String raffiné : Mondaino.
+        String brut : LUZZARA. String raffiné : Luzzara.
+        String brut : VARSI. String raffiné : Varsi.
+        String brut : SISSA. String raffiné : Sissa.
+        String brut : CASTEL GUELFO DI BOLOGNA. String raffiné : Castel Guelfo Di Bologna.
+        String brut : ROCCA SAN CASCIANO. String raffiné : Rocca San Casciano.
+        String brut : CALESTANO. String raffiné : Calestano.
+        String brut : CASTROCARO TERME E TERRA DEL SOLE. String raffiné : Castrocaro Terme E Terra Del Sole.
+        String brut : FIORENZUOLA D`ARDA. String raffiné : Fiorenzuola D`Arda.
+        String brut : PIANORO. String raffiné : Pianoro.
+        String brut : SAN CLEMENTE. String raffiné : San Clemente.
+        String brut : CREVALCORE. String raffiné : Crevalcore.
+        String brut : CASTEL DI CASIO. String raffiné : Castel Di Casio.
+        String brut : GALLIERA. String raffiné : Galliera.
+        String brut : BAGNOLO IN PIANO. String raffiné : Bagnolo In Piano.
+        String brut : NOVI DI MODENA. String raffiné : Novi Di Modena.
+        String brut : VIGOLZONE. String raffiné : Vigolzone.
+        String brut : VIGARANO MAINARDA. String raffiné : Vigarano Mainarda.
+        String brut : BESENZONE. String raffiné : Besenzone.
+        String brut : SAN MARTINO IN RIO. String raffiné : San Martino In Rio.
+        String brut : MIRABELLO. String raffiné : Mirabello.
+        String brut : COLLAGNA. String raffiné : Collagna.
+        String brut : SALSOMAGGIORE TERME. String raffiné : Salsomaggiore Terme.
+        String brut : SAN CESARIO SUL PANARO. String raffiné : San Cesario Sul Panaro.
+        String brut : CASTELVETRO DI MODENA. String raffiné : Castelvetro Di Modena.
+        String brut : PALAGANO. String raffiné : Palagano.
+        String brut : CAORSO. String raffiné : Caorso.
+        String brut : BORGO TOSSIGNANO. String raffiné : Borgo Tossignano.
+        String brut : RIVERGARO. String raffiné : Rivergaro.
+        String brut : PREDAPPIO. String raffiné : Predappio.
+        String brut : San Leo. String raffiné : San Leo.
+        String brut : BERTINORO. String raffiné : Bertinoro.
+        String brut : MORFASSO. String raffiné : Morfasso.
+        String brut : BUSANA. String raffiné : Busana.
+        String brut : ALSENO. String raffiné : Alseno.
+        String brut : MORDANO. String raffiné : Mordano.
+        String brut : MERCATO SARACENO. String raffiné : Mercato Saraceno.
+        String brut : CADEO. String raffiné : Cadeo.
+        String brut : FONTEVIVO. String raffiné : Fontevivo.
+        String brut : CASTEL D`AIANO. String raffiné : Castel D`Aiano.
+        String brut : COMACCHIO. String raffiné : Comacchio.
+        String brut : MEDICINA. String raffiné : Medicina.
+        String brut : SASSUOLO. String raffiné : Sassuolo.
+        String brut : MEZZANI. String raffiné : Mezzani.
+        String brut : NOCETO. String raffiné : Noceto.
+        String brut : CASTIGLIONE DEI PEPOLI. String raffiné : Castiglione Dei Pepoli.
+        String brut : GEMMANO. String raffiné : Gemmano.
+        String brut : FONTANELLATO. String raffiné : Fontanellato.
+        String brut : FERRARA. String raffiné : Ferrara.
+        String brut : SAN MAURO PASCOLI. String raffiné : San Mauro Pascoli.
+        String brut : BASTIGLIA. String raffiné : Bastiglia.
+        String brut : CASALGRANDE. String raffiné : Casalgrande.
+        String brut : PORTOMAGGIORE. String raffiné : Portomaggiore.
+        String brut : LESIGNANO DE`BAGNI. String raffiné : Lesignano De`Bagni.
+        String brut : GAMBETTOLA. String raffiné : Gambettola.
+        String brut : BAISO. String raffiné : Baiso.
+        String brut : SCANDIANO. String raffiné : Scandiano.
+        String brut : VERGATO. String raffiné : Vergato.
+        String brut : NEVIANO DEGLI ARDUINI. String raffiné : Neviano Degli Arduini.
+        String brut : SAN BENEDETTO VAL DI SAMBRO. String raffiné : San Benedetto Val Di Sambro.
+        String brut : CARPANETO PIACENTINO. String raffiné : Carpaneto Piacentino.
+        String brut : CONCORDIA SULLA SECCHIA. String raffiné : Concordia Sulla Secchia.
+        String brut : MARANELLO. String raffiné : Maranello.
+        String brut : CAMINATA. String raffiné : Caminata.
+        String brut : BERCETO. String raffiné : Berceto.
+        String brut : CORREGGIO. String raffiné : Correggio.
+        String brut : CASTENASO. String raffiné : Castenaso.
+        String brut : RIMINI. String raffiné : Rimini.
+        String brut : MONTICELLI D`ONGINA. String raffiné : Monticelli D`Ongina.
+        String brut : BAGNO DI ROMAGNA. String raffiné : Bagno Di Romagna.
+        String brut : CORTEMAGGIORE. String raffiné : Cortemaggiore.
+        String brut : VEZZANO SUL CROSTOLO. String raffiné : Vezzano Sul Crostolo.
+        String brut : CODIGORO. String raffiné : Codigoro.
+        String brut : TOANO. String raffiné : Toano.
+        String brut : BIBBIANO. String raffiné : Bibbiano.
+        String brut : CRESPELLANO. String raffiné : Crespellano.
+        String brut : PARMA. String raffiné : Parma.
+        String brut : FINALE EMILIA. String raffiné : Finale Emilia.
+        String brut : BUSSETO. String raffiné : Busseto.
+        String brut : OTTONE. String raffiné : Ottone.
+        String brut : FORNOVO DI TARO. String raffiné : Fornovo Di Taro.
+        String brut : BARDI. String raffiné : Bardi.
+        String brut : POGGIO RENATICO. String raffiné : Poggio Renatico.
+        String brut : CONSELICE. String raffiné : Conselice.
+        String brut : CERIGNALE. String raffiné : Cerignale.
+        String brut : GUALTIERI. String raffiné : Gualtieri.
+        String brut : REGGIOLO. String raffiné : Reggiolo.
+        String brut : LANGHIRANO. String raffiné : Langhirano.
+        String brut : MODENA. String raffiné : Modena.
+        String brut : VETTO. String raffiné : Vetto.
+        String brut : DOZZA. String raffiné : Dozza.
+        String brut : CASTEL BOLOGNESE. String raffiné : Castel Bolognese.
+        String brut : CASTEL SAN PIETRO TERME. String raffiné : Castel San Pietro Terme.
+        String brut : MONTECHIARUGOLO. String raffiné : Montechiarugolo.
+        String brut : BORGO VAL DI TARO. String raffiné : Borgo Val Di Taro.
+        String brut : CENTO. String raffiné : Cento.
+        String brut : CALENDASCO. String raffiné : Calendasco.
+        String brut : PONTENURE. String raffiné : Pontenure.
+        String brut : ARGELATO. String raffiné : Argelato.
+        String brut : ROLO. String raffiné : Rolo.
+        String brut : SAN GIOVANNI IN PERSICETO. String raffiné : San Giovanni In Persiceto.
+        String brut : SPILAMBERTO. String raffiné : Spilamberto.
+        String brut : GROPPARELLO. String raffiné : Gropparello.
+        String brut : SAN FELICE SUL PANARO. String raffiné : San Felice Sul Panaro.
+        String brut : MISANO ADRIATICO. String raffiné : Misano Adriatico.
+        String brut : IMOLA. String raffiné : Imola.
+        String brut : GRANAGLIONE. String raffiné : Granaglione.
+        String brut : GRIZZANA MORANDI. String raffiné : Grizzana Morandi.
+        String brut : SAVIGNANO SUL PANARO. String raffiné : Savignano Sul Panaro.
+        String brut : Talamello. String raffiné : Talamello.
+        String brut : CESENATICO. String raffiné : Cesenatico.
+        String brut : ROCCABIANCA. String raffiné : Roccabianca.
+        String brut : SAN POSSIDONIO. String raffiné : San Possidonio.
+        String brut : VERNASCA. String raffiné : Vernasca.
+        String brut : PONTE DELL`OLIO. String raffiné : Ponte Dell`Olio.
+        String brut : SALUDECIO. String raffiné : Saludecio.
+        String brut : POGGIO BERNI. String raffiné : Poggio Berni.
+        String brut : MARZABOTTO. String raffiné : Marzabotto.
+        String brut : BRESCELLO. String raffiné : Brescello.
+        String brut : BETTOLA. String raffiné : Bettola.
+        String brut : MALALBERGO. String raffiné : Malalbergo.
+        String brut : GATTEO. String raffiné : Gatteo.
+        String brut : NOVELLARA. String raffiné : Novellara.
+        String brut : FRASSINORO. String raffiné : Frassinoro.
+        String brut : VOGHIERA. String raffiné : Voghiera.
+        String brut : MODIGLIANA. String raffiné : Modigliana.
+        String brut : LUGO. String raffiné : Lugo.
+        String brut : SOLIGNANO. String raffiné : Solignano.
+        String brut : BOBBIO. String raffiné : Bobbio.
+        String brut : CORTE BRUGNATELLA. String raffiné : Corte Brugnatella.
+        String brut : PODENZANO. String raffiné : Podenzano.
+        String brut : TORNOLO. String raffiné : Tornolo.
+        String brut : FELINO. String raffiné : Felino.
+        String brut : SAN PIETRO IN CERRO. String raffiné : San Pietro In Cerro.
+        String brut : PALANZANO. String raffiné : Palanzano.
+        String brut : MEDOLLA. String raffiné : Medolla.
+        String brut : MONTECCHIO EMILIA. String raffiné : Montecchio Emilia.
+        String brut : NIBBIANO. String raffiné : Nibbiano.
+        String brut : GAGGIO MONTANO. String raffiné : Gaggio Montano.
+        String brut : TRAVO. String raffiné : Travo.
+        String brut : MESOLA. String raffiné : Mesola.
+        String brut : MONTESCUDO. String raffiné : Montescudo.
+        String brut : CASTELLO DI SERRAVALLE. String raffiné : Castello Di Serravalle.
+        String brut : BORGONOVO VAL TIDONE. String raffiné : Borgonovo Val Tidone.
+        String brut : RAMISETO. String raffiné : Ramiseto.
+        String brut : OZZANO DELL`EMILIA. String raffiné : Ozzano Dell`Emilia.
+        String brut : BORETTO. String raffiné : Boretto.
+        String brut : BERRA. String raffiné : Berra.
+        String brut : FARINI. String raffiné : Farini.
+        String brut : JOLANDA DI SAVOIA. String raffiné : Jolanda Di Savoia.
+        String brut : TORRIANA. String raffiné : Torriana.
+        String brut : NONANTOLA. String raffiné : Nonantola.
+        String brut : CASOLA VALSENIO. String raffiné : Casola Valsenio.
+        String brut : BENTIVOGLIO. String raffiné : Bentivoglio.
+        String brut : FORMIGNANA. String raffiné : Formignana.
+        String brut : SANT`AGOSTINO. String raffiné : Sant`Agostino.
+        String brut : VALMOZZOLA. String raffiné : Valmozzola.
+        String brut : MASSA FISCAGLIA. String raffiné : Massa Fiscaglia.
+        String brut : PORTICO E SAN BENEDETTO. String raffiné : Portico E San Benedetto.
+        String brut : ANZOLA DELL`EMILIA. String raffiné : Anzola Dell`Emilia.
+        String brut : PIOZZANO. String raffiné : Piozzano.
+        String brut : VIGNOLA. String raffiné : Vignola.
+        String brut : ALBINEA. String raffiné : Albinea.
+        String brut : SORAGNA. String raffiné : Soragna.
+        String brut : CASALFIUMANESE. String raffiné : Casalfiumanese.
+        String brut : BELLARIA-IGEA MARINA. String raffiné : Bellaria-Igea Marina.
+        String brut : PAVULLO NEL FRIGNANO. String raffiné : Pavullo Nel Frignano.
+        String brut : FIORANO MODENESE. String raffiné : Fiorano Modenese.
+        String brut : FORLIMPOPOLI. String raffiné : Forlimpopoli.
+        String brut : TRESIGALLO. String raffiné : Tresigallo.
+        String brut : SAN POLO D`ENZA. String raffiné : San Polo D`Enza.
+        String brut : ZIBELLO. String raffiné : Zibello.
+        String brut : CARPINETI. String raffiné : Carpineti.
+        String brut : FONTANELICE. String raffiné : Fontanelice.
+        String brut : MORCIANO DI ROMAGNA. String raffiné : Morciano Di Romagna.
+        String brut : BOMPORTO. String raffiné : Bomporto.
+        String brut : CORIANO. String raffiné : Coriano.
+        String brut : SAN SECONDO PARMENSE. String raffiné : San Secondo Parmense.
+        String brut : BUDRIO. String raffiné : Budrio.
+        String brut : SESTOLA. String raffiné : Sestola.
+        String brut : MONTE COLOMBO. String raffiné : Monte Colombo.
+        String brut : GORO. String raffiné : Goro.
+        String brut : MONTEFIORINO. String raffiné : Montefiorino.
+        String brut : MONTERENZIO. String raffiné : Monterenzio.
+        String brut : GATTATICO. String raffiné : Gattatico.
+        String brut : RICCIONE. String raffiné : Riccione.
+        String brut : MONTE SAN PIETRO. String raffiné : Monte San Pietro.
+        String brut : MASI TORELLO. String raffiné : Masi Torello.
+        String brut : LIGONCHIO. String raffiné : Ligonchio.
+        String brut : GRAGNANO TREBBIENSE. String raffiné : Gragnano Trebbiense.
+        String brut : GAZZOLA. String raffiné : Gazzola.
+        String brut : PORRETTA TERME. String raffiné : Porretta Terme.
+        String brut : VERUCCHIO. String raffiné : Verucchio.
+        String brut : PRIGNANO SULLA SECCHIA. String raffiné : Prignano Sulla Secchia.
+        String brut : RIO SALICETO. String raffiné : Rio Saliceto.
+        String brut : LONGIANO. String raffiné : Longiano.
+        String brut : Casteldelci. String raffiné : Casteldelci.
+        String brut : SANT`AGATA SUL SANTERNO. String raffiné : Sant`Agata Sul Santerno.
+        String brut : TERENZO. String raffiné : Terenzo.
+        String brut : CASALECCHIO DI RENO. String raffiné : Casalecchio Di Reno.
+        String brut : TIZZANO VAL PARMA. String raffiné : Tizzano Val Parma.
+        String brut : FUSIGNANO. String raffiné : Fusignano.
+        String brut : GRANAROLO DELL`EMILIA. String raffiné : Granarolo Dell`Emilia.
+        String brut : RIOLO TERME. String raffiné : Riolo Terme.
+        String brut : SASSO MARCONI. String raffiné : Sasso Marconi.
+        String brut : FORMIGINE. String raffiné : Formigine.
+        String brut : MONTEFIORE CONCA. String raffiné : Montefiore Conca.
+        String brut : PIEVE DI CENTO. String raffiné : Pieve Di Cento.
+        String brut : ROTTOFRENO. String raffiné : Rottofreno.
+        String brut : TRECASALI. String raffiné : Trecasali.
+        String brut : CASTELNOVO DI SOTTO. String raffiné : Castelnovo Di Sotto.
+        String brut : FORLI`. String raffiné : Forli`.
+        String brut : PIACENZA. String raffiné : Piacenza.
+        String brut : MOLINELLA. String raffiné : Molinella.
+        String brut : CASTEL MAGGIORE. String raffiné : Castel Maggiore.
+        String brut : BEDONIA. String raffiné : Bedonia.
+        String brut : ALBARETO. String raffiné : Albareto.
+        String brut : MINERBIO. String raffiné : Minerbio.
+        String brut : BRISIGHELLA. String raffiné : Brisighella.
+        String brut : GUIGLIA. String raffiné : Guiglia.
+        String brut : Maiolo. String raffiné : Maiolo.
+        String brut : COTIGNOLA. String raffiné : Cotignola.
+        String brut : SARMATO. String raffiné : Sarmato.
+        String brut : SAN GIORGIO DI PIANO. String raffiné : San Giorgio Di Piano.
+        String brut : CASTELL`ARQUATO. String raffiné : Castell`Arquato.
+        String brut : CARPI. String raffiné : Carpi.
+        String brut : ZOLA PREDOSA. String raffiné : Zola Predosa.
+        String brut : POLINAGO. String raffiné : Polinago.
+        String brut : MONCHIO DELLE CORTI. String raffiné : Monchio Delle Corti.
+        String brut : CIVITELLA DI ROMAGNA. String raffiné : Civitella Di Romagna.
+        String brut : SARSINA. String raffiné : Sarsina.
+        String brut : CASTELFRANCO EMILIA. String raffiné : Castelfranco Emilia.
+        String brut : MONTEGRIDOLFO. String raffiné : Montegridolfo.
+        String brut : MONTEVEGLIO. String raffiné : Monteveglio.
+        String brut : BONDENO. String raffiné : Bondeno.
+        String brut : CORNIGLIO. String raffiné : Corniglio.
+        String brut : LUGAGNANO VAL D`ARDA. String raffiné : Lugagnano Val D`Arda.
+        String brut : CAVEZZO. String raffiné : Cavezzo.
+        String brut : SANT`ILARIO D`ENZA. String raffiné : Sant`Ilario D`Enza.
+        String brut : PELLEGRINO PARMENSE. String raffiné : Pellegrino Parmense.
+        String brut : SOLAROLO. String raffiné : Solarolo.
+        String brut : GUASTALLA. String raffiné : Guastalla.
+        String brut : TRAVERSETOLO. String raffiné : Traversetolo.
+        String brut : FERRIERE. String raffiné : Ferriere.
+        String brut : MONTECRETO. String raffiné : Montecreto.
+        String brut : SAN LAZZARO DI SAVENA. String raffiné : San Lazzaro Di Savena.
+        String brut : SAN GIORGIO PIACENTINO. String raffiné : San Giorgio Piacentino.
+        String brut : COLI. String raffiné : Coli.
+        String brut : RO. String raffiné : Ro.
+        String brut : SALA BOLOGNESE. String raffiné : Sala Bolognese.
+        String brut : FIDENZA. String raffiné : Fidenza.
+        String brut : ZIANO PIACENTINO. String raffiné : Ziano Piacentino.
+        String brut : AGAZZANO. String raffiné : Agazzano.
+        String brut : BOLOGNA. String raffiné : Bologna.
+        String brut : TORRILE. String raffiné : Torrile.
+        String brut : COLLECCHIO. String raffiné : Collecchio.
+        String brut : ZERBA. String raffiné : Zerba.
+        String brut : FANANO. String raffiné : Fanano.
+        String brut : BAGNARA DI ROMAGNA. String raffiné : Bagnara Di Romagna.
+        String brut : Novafeltria. String raffiné : Novafeltria.
+        String brut : MONTESE. String raffiné : Montese.
+        String brut : CADELBOSCO DI SOPRA. String raffiné : Cadelbosco Di Sopra.
+        String brut : SAN GIOVANNI IN MARIGNANO. String raffiné : San Giovanni In Marignano.
+        String brut : CAMPEGINE. String raffiné : Campegine.
+        String brut : CANOSSA. String raffiné : Canossa.
+        String brut : Sant'Agata Feltria. String raffiné : Sant'Agata Feltria.
+        String brut : RIOLUNATO. String raffiné : Riolunato.
+        String brut : GALEATA. String raffiné : Galeata.
+        String brut : COLORNO. String raffiné : Colorno.
+        String brut : ALFONSINE. String raffiné : Alfonsine.
+        String brut : MARANO SUL PANARO. String raffiné : Marano Sul Panaro.
+        String brut : SAN PROSPERO. String raffiné : San Prospero.
+        String brut : CASTELLO D`ARGILE. String raffiné : Castello D`Argile.
+        String brut : OSTELLATO. String raffiné : Ostellato.
+        String brut : BAZZANO. String raffiné : Bazzano.
+        String brut : REGGIO NELL`EMILIA. String raffiné : Reggio Nell`Emilia.
+        String brut : BAGNACAVALLO. String raffiné : Bagnacavallo.
+        String brut : VARANO DE`MELEGARI. String raffiné : Varano De`Melegari.
+        String brut : PIEVEPELAGO. String raffiné : Pievepelago.
+        String brut : LOIANO. String raffiné : Loiano.
+        String brut : SORBOLO. String raffiné : Sorbolo.
+        String brut : RUBIERA. String raffiné : Rubiera.
+        String brut : ZOCCA. String raffiné : Zocca.
+        String brut : CASINA. String raffiné : Casina.
+        String brut : MIGLIARINO. String raffiné : Migliarino.
+        String brut : CESENA. String raffiné : Cesena.
+        String brut : CASTELNUOVO RANGONE. String raffiné : Castelnuovo Rangone.
+        String brut : SAVIGNO. String raffiné : Savigno.
+        String brut : LIZZANO IN BELVEDERE. String raffiné : Lizzano In Belvedere.
+        String brut : CATTOLICA. String raffiné : Cattolica.
+        String brut : CASTEL DEL RIO. String raffiné : Castel Del Rio.
+        String brut : CASTELLARANO. String raffiné : Castellarano.
+        String brut : VILLANOVA SULL`ARDA. String raffiné : Villanova Sull`Arda.
+        String brut : ARGENTA. String raffiné : Argenta.
+        String brut : BARICELLA. String raffiné : Baricella.
+        String brut : QUATTRO CASTELLA. String raffiné : Quattro Castella.
+        String brut : MONZUNO. String raffiné : Monzuno.
+        String brut : MIGLIARO. String raffiné : Migliaro.
+        String brut : COPPARO. String raffiné : Copparo.
+    ###################################
+    Début de la fonction StrValidator
+        Lignes validées : 348
+        Lignes corrigées : 0
+        Lignes éliminées : 0
+    ###################################
+    Début de la fonction OutFileCreate
+        Création du fichier 001_out
+        Création du fichier 001_log
