@@ -4,6 +4,7 @@ Ce fichier permet de suivre le travail d'ouvrière pour raffiner la donnée :)
 A consulter avant de se lancer dans une session de raffinage.
 A modifier religieusement après la session !
 
+
 ~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~
 1. Tableau des statuts de mission
 ~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~
@@ -21,7 +22,7 @@ N°      Statut					Utilisation
 -----+------------------------+--------------+
 003		Accomplie				Non utilisé
 -----+------------------------+--------------+
-004		A faire					Non utilisé
+004		En cours (sighill)		Non utilisé
 -----+------------------------+--------------+
 005		A faire					Non utilisé
 -----+------------------------+--------------+
@@ -35,6 +36,12 @@ N°      Statut					Utilisation
 -----+------------------------+--------------+
 010    (Attendre primus)		Non utilisé
 -----+------------------------+--------------+
+011		A faire					Non utilisé
+-----+------------------------+--------------+
+012		A faire					Non utilisé
+-----+------------------------+--------------+
+013		A faire					Non utilisé
+-----+------------------------+--------------+
 
 ~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~
 2. Main courante pour informations importantes
@@ -44,10 +51,21 @@ Ici rajouter les informations sur les fonctions ajoutées, modifiées,
 Placer l'information la plus récente en haut !
 
 ~.~.~.~.~.~.~.~.~.~.~.~.
+2016/04/14 - Sighill
+	Ajout de nouvelles missions relativement cool : 011, 012
+	Ajout d'une mission crado : 013
+	Source de noms de famille pour la suite :
+	http://www.lavoute.org/debuter/patronyme.htm
+
+~.~.~.~.~.~.~.~.~.~.~.~.
 2016/04/12 - Sighill
 	J'ai ajouté la fonction OdditiesFinder. Elle est cool !
 		Il manque juste des entrées log pour la clarté.
 		EDIT : addlog ajouté :)
+	Je sais pas trop comment gérer les variables qui entrent et
+		sortent de chaque fonction. Dans le cas de fonctions qui
+		s'enchaînent, je sais pas comment nommer les var de sortie 
+		et les vars d'entrée. A discuter !
 
 ~.~.~.~.~.~.~.~.~.~.~.~.
 2016/04/09 - Sighill

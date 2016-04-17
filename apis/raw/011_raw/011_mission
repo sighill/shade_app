@@ -1,0 +1,25 @@
+011_mission
+#####################################################################
+# INFOS
+#####################################################################
+Le fichier comporte un copier coller de la page wikipedia :
+https://fr.wikipedia.org/wiki/Liste_des_pr%C3%A9noms_italiens
+Seulement la partie féminine. Voir 012 pour prénoms masculins.
+
+
+#####################################################################
+# OBJECTIF
+#####################################################################
+Obtenir un prénom par ligne, mis en forme pour le standard primus.
+
+#####################################################################
+# REGLES GENERALES
+#####################################################################
+
+- Le processus de raffinage ne doit pas altérer le fichier source
+
+- Tous les scripts de nettoyage doivent être dans le dossier ###_raw 
+	et si possible les commenter pour réutilisation
+
+- Les fichiers de donnée raffinée doivent être placés dans
+	/home/common/shade/apis/out/

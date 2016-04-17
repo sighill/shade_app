@@ -1,0 +1,25 @@
+Log des missions de primus
+
+Ce fichier permet de suivre l'évolution du modèle de db! 
+
+~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~
+1. Main courante pour informations importantes
+~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~
+Ici rajouter les informations sur les fonctions ajoutées, modifiées,
+	ou sur toute autre information intéressante.
+Placer l'information la plus récente en haut !
+
+~.~.~.~.~.~.~.~.~.~.~.~.
+2016/04/16
+	Migration db effectuée sur la base d'une première mouture de
+		modèles.
+	Création d'un fichier nommé "ostium.py" (porte d'entrée) pour
+		y créer les scripts d'intégration d'objets python dans la db.
+
+~.~.~.~.~.~.~.~.~.~.~.~.
+2016/04/15 - Sighill
+	Début de travail sur Primus. Je m'attaque à la table prénom 
+		car je voudrais savoir comment stocker simplement les 
+		différents types de prénom, et donc faciliter leur importation
+		en construisant les fichiers out d'apis intelligemment.
+	NB : je n'ai pas fait de migration ! La db n'est meme pas montée.

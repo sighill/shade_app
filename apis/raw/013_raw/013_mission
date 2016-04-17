@@ -1,0 +1,24 @@
+013_mission
+#####################################################################
+# INFOS
+#####################################################################
+Le fichier comporte une liste de noms de famille italiens
+http://www.lavoute.org/debuter/nomsitalie.htm
+
+
+#####################################################################
+# OBJECTIF
+#####################################################################
+Obtenir un prénom par ligne, mis en forme pour le standard primus.
+
+#####################################################################
+# REGLES GENERALES
+#####################################################################
+
+- Le processus de raffinage ne doit pas altérer le fichier source
+
+- Tous les scripts de nettoyage doivent être dans le dossier ###_raw 
+	et si possible les commenter pour réutilisation
+
+- Les fichiers de donnée raffinée doivent être placés dans
+	/home/common/shade/apis/out/
