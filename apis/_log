@@ -24,9 +24,9 @@ N°      Statut					Utilisation
 -----+------------------------+--------------+
 004		En cours (sighill)		Non utilisé
 -----+------------------------+--------------+
-005		A faire					Non utilisé
+005		Accomplie				Non utilisé
 -----+------------------------+--------------+
-006		A faire					Non utilisé
+006		Accomplie				Non utilisé
 -----+------------------------+--------------+
 007		A faire					Non utilisé
 -----+------------------------+--------------+
@@ -49,6 +49,7 @@ N°      Statut					Utilisation
 Ici rajouter les informations sur les fonctions ajoutées, modifiées,
 	ou sur toute autre information intéressante.
 Placer l'information la plus récente en haut !
+
 
 ~.~.~.~.~.~.~.~.~.~.~.~.
 2016/04/14 - Sighill

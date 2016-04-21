@@ -1,0 +1,130 @@
+# MEMO DES COMMANDES DJANGO LES PLUS UTILES
+
+# /!\ DJANGO V1.8 (Penser à ça dans la docu du site)
+# /!\ PYTHON v2.7 et v3.4 (toujours utiliser 'python3' et pas 'python')
+
+# Documentation     https://docs.djangoproject.com/fr/1.8/
+# Tutoriel          https://docs.djangoproject.com/fr/1.8/intro/tutorial01/
+
+# ---------------------------------------------------------------------------
+# PARTIE O - Commandes utiles
+# ---------------------------------------------------------------------------
+
+# 1. Obtenir la version de django en cours 
+    python3
+        import django
+        django.VERSION
+        ctrl+D
+
+# 2. Python en ligne de commande sur un projet Django
+    cd /home/common/vsite
+    python3 manage.py shell
+    
+# ---------------------------------------------------------------------------
+# PARTIE I - Initialiser un projet Django
+# Pour faciliter les exemples, on utilise un user "shogo1" et ses clones
+# ie shogo1, shogo2, etc... Et un dossier de travail /home/shogo1/travail1
+# ---------------------------------------------------------------------------
+
+# 1. Créer et se placer dans un dossier de travail
+    mkdir /home/shogo1/travail1
+    cd /home/shogo1/travail1
+
+# 2. Initialiser un projet Django
+    django-admin startproject travail1
+
+# 3. (optionnel) Vérifier l'architecture
+    tree
+
+# 4. Modifier le fichier de configuration
+    vim travail1/settings.py
+    # Choisir le type de db utilisée
+    # https://docs.djangoproject.com/fr/1.8/topics/install/#database-installation
+    # Migrer les tables basiques vers la db
+    python3 manage.py migrate
+
+# 5. Créer un superutilisateur du projet django
+    cd /home/shogo1/travail1
+    python3 manage.py createsuperuser
+    # Renseigner les incréments d'identification
+    # Utiliser un mdp bien fort http://www.passwordmeter.com/
+
+# 6. (optionnel) dans le cas du choix postgresql, il faut :
+    # Créer la db par pgadmin ou psql command line
+    # Créer un user UNIX
+
+# ---------------------------------------------------------------------------
+# PARTIE II - Démarrer un serveur de développement
+# Pour faciliter les exemples, on utilise un user "shogo1" et ses clones
+# ie shogo1, shogo2, etc... Et un dossier de travail /home/shogo1/travail1
+# On considère ici que l'IP publique de voxclamServer est 10.12.14.16
+# et qu'il existe une redirection de port prévue spécialement pour django
+# EXTERNE 58080 --- 8080 INTERNE
+# ---------------------------------------------------------------------------
+
+# 1. Démarrer une instance ssh spéciale pour le serveur de développement
+
+# 2. Se placer dans le répertoire de travail
+    cd /home/shogo1/travail1
+
+# 3. Démarrer le serveur avec la config spéciale voxclamServer
+    python3 manage.py runserver 0.0.0.0:8080
+    # :8080 est important pour la redirection de port freebox
+
+# 4. Se connecter au serveur de développement par navigateur
+    # Barre d'adresse : 10.12.14.16:58080
+
+# 5. (optionnel) Une page automatique d'admin est créée automatiquement
+    10.12.14.16:58080/admin
+    # Utiliser les incréments du superuser créé en partie I.5
+
+# ---------------------------------------------------------------------------
+# PARTIE III - Créer une app
+# Pour faciliter les exemples, on utilise un user "shogo1" et ses clones
+# ie shogo1, shogo2, etc... Et un dossier de travail /home/shogo1/travail1
+# ---------------------------------------------------------------------------
+
+# 1. Se placer dans le répertoire de travail
+    cd /home/shogo1/travail1
+
+# 2. Initialiser l'app
+    python3 manage.py startapp appShogo1
+
+# 3. Effectuer une première migration vers la db
+    python3 manage.py migrate
+
+# 3. Modifier le fichier de configuration du projet
+    vim /home/shogo1/travail1/travail1/settings.py
+    # Ajouter appShogo1 à la liste des applications installées
+        INSTALLED_APPS = (
+            'django.contrib.admin',
+            ...
+            'appShogo1',
+            ...
+        ) 
+
+# 4. WIP
+
+# ---------------------------------------------------------------------------
+# PARTIE IV - Modifier la structure des modèles
+# ---------------------------------------------------------------------------
+
+# 1. Changer les modèles dans le fichier models.py
+
+# 2. Migrer les modèles vers la db
+    cd /home/shogo1/travail1
+    python3 manage.py makemigrations
+    python3 manage.py migrate
+
+
+# ---------------------------------------------------------------------------
+# PARTIE V - utiliser geoDjango
+# ---------------------------------------------------------------------------
+
+#1. Exporter une table postGIS vers un fichier geoJSON pour affichage leaflet
+    # su django-pg
+    # ctrl xe
+    # Création d'un fichier geoJSOn pour 
+    ogr2ogr -f GeoJSON geo_sestieri.json \
+            "PG:host=localhost dbname=dbvsite user=django-pg password=<pw>" \
+            -sql "select gid,id,country,sestiere,commentary from geo_sestieri"

@@ -19,6 +19,7 @@
 #####################################################################
 
 log = ''
+headerConstant = 'HEADER='
 
 #####################################################################
 def WorkPath():
@@ -65,7 +66,7 @@ def AddLog(log_level , str_to_add):
     return log
 
 #####################################################################
-def OutFileCreate(out_path,raw_filename,ref_list):
+def OutFileCreate(out_path,raw_filename,ref_list,header):
     """
         OutFileCreate 2016.04.08
         Crée les fichiers out et log au bon endroit, et les remplit.
@@ -81,11 +82,22 @@ def OutFileCreate(out_path,raw_filename,ref_list):
     global log
     # Variables locales
     file_id = raw_filename[:3]
+    
+    # Création du header
+    headerComplete = ''
+    if( header == '' ):
+        AddLog('corpus' , 'Fichier créé sans header')         
+    else:
+        headerComplete = headerConstant + header + '\n'
+        AddLog('corpus' , 'Le header sera: {}'.format( headerComplete ) )
    
     # Création du fichier ###_out
     # NB : l'argument w+ écrase l'ancien fichier s'il existe !
     AddLog('corpus' , 'Création du fichier {}_out'.format(file_id))
     with open(out_path + file_id + '_out' , 'w+') as ofi_out:
+        # Insertion du header seulement si il est non nul
+        if( headerComplete != '' ):
+            ofi_out.write( headerComplete )
         ofi_out.write('\n'.join(ref_list))
     ofi_out.close()
         
@@ -203,7 +215,7 @@ def OdditiesFinder(raw_list):
     'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 
     'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 
     'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 
-    'W', 'X', 'Y', 'Z', '\'' , ' ']
+    'W', 'X', 'Y', 'Z', '\'' , ' ' ]
     
     # Pour chaque ligne, déconstruction lettre par lettre et 
     #   comparaison de chaque lettre à un dico personnalisé
