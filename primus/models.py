@@ -136,6 +136,8 @@ class Grid(models.Model):
     gid = models.AutoField(primary_key = True , db_index = True)
     x = models.IntegerField(null = True)
     y = models.IntegerField(null = True)
+    country = models.PositiveIntegerField(null = True)
+    region = models.PositiveIntegerField(null = True)
     geom = gismodels.PolygonField(srid = 3857)    
     
     # Methodes
@@ -167,8 +169,6 @@ class GridCentroid(models.Model):
     def __str__(self):
         return str(self.name)
 
-
-
 #####################################################################
 # Classe de continent (geom : True)
 #####################################################################
@@ -185,61 +185,6 @@ class Continent(models.Model):
     name = models.CharField(max_length = 50 , unique = True)
     geom = gismodels.PolygonField(srid = 3857)
     # Methodes
-    def __str__(self):
-        return str(self.name)
-
-#####################################################################
-# Classe de pays (geom : True)
-#####################################################################
-class Country(models.Model):
-    '''
-        La géométrie de cette couche se cale sur les cases de Grid.
-        La table des pays. Le nombres de pays n'est pas censé changer 
-            mais les frontières peuvent être vouées à être modifiées.
-        7 pays : 
-            1 Empire du Roi-Lune , 2 Lagashein , 3 Lombrie , 4 Ostrie
-            5 Pays clémentin , 6 Ravénie , 7 Thémésie
-        La table possède une géométrie ! 
-            Le champ uid devient donc gid.
-    '''
-    # TODO 
-
-    # Variables pour les choix pré-remplis
-
-    # Attributs
-    gid = models.AutoField(primary_key = True , db_index = True)
-    name = models.CharField(max_length = 50 , unique = True)
-    modified = models.DateTimeField(null = True , auto_now = True)
-    geom = gismodels.PolygonField(srid = 3857)
-    
-    # Méthodes
-    def __str__(self):
-        return str(self.name)
-
-#####################################################################
-# Classe de région (geom : True)
-#####################################################################
-class Region(models.Model):
-    '''
-        La géométrie de cette couche se cale sur les cases de Grid.
-        La table des regions permet de subdiviser les pays en zones
-            naturelles ou politiques pour apporter des nuances
-            aux pays. Le rôle de cette table est encore peu défini,
-            mais sa mise en place permet de la prendre en compte.
-        Possède une géométrie ! Le champ uid devient donc gid.
-    '''
-    # TODO 
-
-    # Variables pour les choix pré-remplis
-
-    # Attributs
-    gid = models.AutoField(primary_key = True , db_index = True)
-    name = models.CharField(max_length = 50 , unique = True)
-    country = models.ForeignKey(Country , null = True)
-    modified = models.DateTimeField(null = True , auto_now = True)
-    geom = gismodels.PolygonField(srid = 3857)
-    
-    # Méthodes
     def __str__(self):
         return str(self.name)
 
@@ -264,11 +209,11 @@ class Town(models.Model):
         ( 5 , 'Fortin' ) )
     # Attributs
     gid = models.AutoField(primary_key = True , db_index = True)
-    name = models.CharField(max_length = 50 , unique = True)
+    name = models.CharField(max_length = 50 , null = True)
     category = models.PositiveIntegerField( null = True ,
         choices = category_choice)
-    country = models.ForeignKey(Country , null = True)
-    region = models.ForeignKey(Region ,  null = True)
+    country = models.PositiveIntegerField( null = True )
+    region = models.PositiveIntegerField( null = True )
     modified = models.DateTimeField(null = True , auto_now = True)
     geom = gismodels.PointField(srid = 3857)
     
@@ -295,9 +240,9 @@ class District(models.Model):
     # Attributs
     gid = models.AutoField(primary_key = True , db_index = True)
     name = models.CharField(null = True , max_length = 50)
-    country = models.ForeignKey(Country , null = True)
-    region = models.ForeignKey(Region , null = True)
-    town = models.ForeignKey(Town , null = True)
+    country = models.PositiveIntegerField( null = True )
+    region = models.PositiveIntegerField( null = True )
+    town = models.PositiveIntegerField( null = True )
     occup_cast = models.CharField(max_length = 20 , 
         default = '40,20,20,20' ,  null = True)
     geom = gismodels.MultiPolygonField(srid = 3857)
@@ -320,9 +265,9 @@ class Island(models.Model):
     # Attributs
     gid = models.AutoField(primary_key = True , db_index = True)
     name = models.CharField(null = True , max_length = 50)
-    country = models.ForeignKey(Country , null = True)
-    region = models.ForeignKey(Region , null = True)
-    district = models.CharField(max_length = 50 , null = True)
+    country = models.PositiveIntegerField( null = True )
+    region = models.PositiveIntegerField( null = True )
+    district = models.PositiveIntegerField( null = True )
     geom = gismodels.PolygonField(srid = 3857)            
 
     # Methodes
@@ -354,10 +299,10 @@ class Path(models.Model):
     name = models.CharField(null = True , max_length = 50)
     type_path = models.PositiveIntegerField( null = True ,
         choices = type_path_choices)
-    country = models.ForeignKey(Country , null = True)
-    region = models.ForeignKey(Region , null = True)
-    town = models.ForeignKey(Town , null = True)
-    district = models.ForeignKey(District , null = True)
+    country = models.PositiveIntegerField( null = True )
+    region = models.PositiveIntegerField( null = True )
+    town = models.PositiveIntegerField( null = True )
+    district = models.PositiveIntegerField( null = True )
     occup_cast = models.CharField(max_length = 20 , 
         default = '40,20,20,20' ,  null = True)
     modified = models.DateTimeField(null = True , auto_now = True)
@@ -436,11 +381,11 @@ class Building(models.Model):
         choices = subcategory_choices)
     deity = models.PositiveIntegerField( null = True , 
         choices = deity_choices)
-    country = models.ForeignKey(Country , null = True)
-    region = models.ForeignKey(Region , null = True)
-    town = models.ForeignKey(Town , null = True)
-    district = models.ForeignKey(District , null = True)
-    path = models.ForeignKey(Path , null = True)
+    country = models.PositiveIntegerField( null = True )
+    region = models.PositiveIntegerField( null = True )
+    town = models.PositiveIntegerField( null = True )
+    district = models.CharField(max_length = 20 ,null = True)
+    path = models.PositiveIntegerField( null = True )
     owner = models.PositiveIntegerField( null = True )
     commentary = models.CharField(null = True , max_length = 1200)
     modified = models.DateTimeField(null = True , auto_now = True)
