@@ -75,7 +75,17 @@ class Archetype(models.Model):
     # TODO 
 
     # Variables pour les choix pré-remplis
-
+    cast_choice = (
+        ( 0 , 'Pègre' ) ,
+        ( 1 , '' ) ,
+        ( 2 , '' ) ,
+        ( 3 , '' ) ,
+        ( 4 , '' ) ,
+        ( 5 , '' ) )
+    category_choice = (
+        ( 1 , 'Basique' ) ,
+        ( 2 , 'Vétéran' ) ,
+        ( 3 , 'Elite' ) ,)
     # Attributs
     gid = models.AutoField(primary_key = True , db_index = True)
     name = models.CharField(max_length = 50)
@@ -136,7 +146,7 @@ class Grid(models.Model):
     gid = models.AutoField(primary_key = True , db_index = True)
     x = models.IntegerField(null = True)
     y = models.IntegerField(null = True)
-    country = models.PositiveIntegerField(null = True)
+    allegiance = models.PositiveIntegerField(null = True)
     region = models.PositiveIntegerField(null = True)
     geom = gismodels.PolygonField(srid = 3857)    
     
@@ -212,7 +222,7 @@ class Town(models.Model):
     name = models.CharField(max_length = 50 , null = True)
     category = models.PositiveIntegerField( null = True ,
         choices = category_choice)
-    country = models.PositiveIntegerField( null = True )
+    allegiance = models.PositiveIntegerField( null = True )
     region = models.PositiveIntegerField( null = True )
     modified = models.DateTimeField(null = True , auto_now = True)
     geom = gismodels.PointField(srid = 3857)
@@ -240,7 +250,7 @@ class District(models.Model):
     # Attributs
     gid = models.AutoField(primary_key = True , db_index = True)
     name = models.CharField(null = True , max_length = 50)
-    country = models.PositiveIntegerField( null = True )
+    allegiance = models.PositiveIntegerField( null = True )
     region = models.PositiveIntegerField( null = True )
     town = models.PositiveIntegerField( null = True )
     occup_cast = models.CharField(max_length = 20 , 
@@ -265,7 +275,7 @@ class Island(models.Model):
     # Attributs
     gid = models.AutoField(primary_key = True , db_index = True)
     name = models.CharField(null = True , max_length = 50)
-    country = models.PositiveIntegerField( null = True )
+    allegiance = models.PositiveIntegerField( null = True )
     region = models.PositiveIntegerField( null = True )
     district = models.PositiveIntegerField( null = True )
     geom = gismodels.PolygonField(srid = 3857)            
@@ -275,11 +285,13 @@ class Island(models.Model):
         return str(self.name)
 
 #####################################################################
-# Classe de voie (geom : True)
+# Classe de voie macro (routes et sentiers entre villes (geom : True)
 #####################################################################
 class Path(models.Model):
     '''
-        Rues, ponts, routes, chemins, sentiers.
+        Routes et sentier macro (entre les villes).
+        Toutes les géométries de cette couche doivent se caler sur 
+        Grid !!!
         Possède une géométrie ! Le champ uid devient donc gid
     '''
     # TODO 
@@ -287,28 +299,54 @@ class Path(models.Model):
     # Variables pour les choix pré-remplis
     type_path_choices = (
         ( 1 , 'Route'   ) ,
-        ( 2 , 'Rue'     ) ,
-        ( 3 , 'Chemin'  ) ,
-        ( 4 , 'Sentier' ) ,
-        ( 5 , 'Pont'    ) ,
-        ( 6 , 'Ponton'  ) ,
-        ( 7 , 'Autre'   ) )
+        ( 2 , 'Chemin'  ) ,
+        ( 3 , 'Sentier' ) )
 
     # Attributs
     gid = models.AutoField(primary_key = True , db_index = True)
     name = models.CharField(null = True , max_length = 50)
     type_path = models.PositiveIntegerField( null = True ,
         choices = type_path_choices)
-    country = models.PositiveIntegerField( null = True )
+    modified = models.DateTimeField(null = True , auto_now = True)
+    geom = gismodels.LineStringField(srid = 3857)
+    
+    # Méthodes
+    def __str__(self):
+        return str(self.name)
+
+#####################################################################
+# Classe de voie micro (voies dans les villes) (geom : True)
+#####################################################################
+class Street(models.Model):
+    '''
+        Concerne les rues micro. Rues, ruelles, surtout urbaines.
+        Ne concerne pas les voies de communication entre les villes
+        et villages.
+    '''
+    # TODO 
+
+    # Variables pour les choix pré-remplis
+    type_street_choice = (
+        ( 4 , 'Rue'     ) ,
+        ( 5 , 'Ruelle'  ) ,
+        ( 6 , 'Pont'    ) ,
+        ( 7 , 'Ponton'  ) ,
+        ( 8 , 'Autre'   ) )
+
+    # Attributs
+    gid = models.AutoField(primary_key = True , db_index = True)
+    name = models.CharField(null = True , max_length = 50)
+    type_street = models.PositiveIntegerField( null = True ,
+        choices = type_street_choice)
+    allegiance = models.PositiveIntegerField( null = True )
     region = models.PositiveIntegerField( null = True )
     town = models.PositiveIntegerField( null = True )
     district = models.PositiveIntegerField( null = True )
     occup_cast = models.CharField(max_length = 20 , 
         default = '40,20,20,20' ,  null = True)
-    modified = models.DateTimeField(null = True , auto_now = True)
     geom = gismodels.LineStringField(srid = 3857)
-    
-    # Méthodes
+
+    # Methodes
     def __str__(self):
         return str(self.name)
 
@@ -381,7 +419,7 @@ class Building(models.Model):
         choices = subcategory_choices)
     deity = models.PositiveIntegerField( null = True , 
         choices = deity_choices)
-    country = models.PositiveIntegerField( null = True )
+    allegiance = models.PositiveIntegerField( null = True )
     region = models.PositiveIntegerField( null = True )
     town = models.PositiveIntegerField( null = True )
     district = models.CharField(max_length = 20 ,null = True)

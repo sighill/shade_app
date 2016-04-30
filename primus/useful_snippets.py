@@ -2,8 +2,6 @@
 
 (  , '' ) ,
 
-(  , '' ) ) 
-
 
 #####################################################################
 # Classe de Template
@@ -34,15 +32,17 @@ class Template(models.Model):
 5 Pays clémentin
 6 Ravénie
 7 Thémésie
+8 Nécris
 
 Capitales :
 1 Ishmer
 2 Orffstein
 3 Trevoletta , Orphia , Montenero
-4 
+4 Lisselberg
 5 Clémence
 6 Agostina
-7 
+7 Thémée
+8 Nécris
 
 
 nextval('primus_path_gid_seq'::regclass)

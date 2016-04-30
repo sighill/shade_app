@@ -10,6 +10,19 @@ Ici rajouter les informations sur les fonctions ajoutées, modifiées,
 Placer l'information la plus récente en haut !
 
 ~.~.~.~.~.~.~.~.~.~.~.~.
+2016/04/24
+	Changement de comportement pour les chemins. Je scinde de plus en 
+	plus les niveaux de zoom entre les données.
+	A ce jour, soit les données sont macro (au delà d'une ville) soit
+	micro (ville et plus petit). C'est pourquoi je scinde les voies 
+	entre les villes (routes, sentiers) des voies dans les villes
+	(rues, ruelles).
+	Cette réflexion mène à la création de deux couches différentes pour
+	les voies. La class Path (macro) se cale sur Grid et la classe
+	Street ne se cale pas sur grid mais sur les géométries micro 
+	(district, island, building).
+
+~.~.~.~.~.~.~.~.~.~.~.~.
 2016/04/22
 	Création de la grille de jeu et travail sur les coordonnées de chaque case.
 	Ca a été long et difficile mais c'est fait ! 
