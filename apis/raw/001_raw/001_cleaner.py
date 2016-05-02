@@ -27,13 +27,18 @@ for line in raw_list:
 	formatted_list.append(StringFormatter(line))
 
 ##################################
+# Passage par OdditiesFinder
+AddLog('subtitle' , 'Début de la fonction OdditiesFinder')
+list_without_oddities = OdditiesFinder( formatted_list )
+
+##################################
 # Validation manuelle du texte
 AddLog('subtitle' , 'Début de la fonction StrValidator')
-ref_list = StrValidator(formatted_list)
+ref_list = StrValidator(list_without_oddities)
 
 ##################################
 # Enregistrement des fichiers sortie
 AddLog('subtitle' , 'Début de la fonction OutFileCreate')
-OutFileCreate('D:/Projets/shade_django/apis/out/','001_src',ref_list)
+OutFileCreate('D:/Projets/shade_django/apis/out/','001_src',ref_list,'regions italiennes')
 
 

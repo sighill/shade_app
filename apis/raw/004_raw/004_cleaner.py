@@ -29,9 +29,9 @@ f_name = []
 for line in raw_list:
 	word_list = list(line)
 	for word in word_list:
-		if word[:1] in ['o','O','i','I','e','E']:
+		if word[-1:] in ['o','O','i','I','e','E']:
 			m_name.append(word)
-		elif word[:1] in ['a','A']:
+		elif word[-1:] in ['a','A']:
 			f_name.append(word)
 		else:
 			pass

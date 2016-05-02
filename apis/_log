@@ -16,11 +16,11 @@ Utilisation du fichier out par primus :
 
 N°      Statut					Utilisation
 -----+------------------------+--------------+
-001		A refaire				Non utilisé
+001		Accomplie				Non utilisé
 -----+------------------------+--------------+
-002		Accomplie				Non utilisé
+002		A refaire (header)		Non utilisé
 -----+------------------------+--------------+
-003		Accomplie				Non utilisé
+003		A refaire (header)		Non utilisé
 -----+------------------------+--------------+
 004		En cours (sighill)		Non utilisé
 -----+------------------------+--------------+
