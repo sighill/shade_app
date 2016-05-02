@@ -1,9 +1,7 @@
 # shade_app
 
-~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~
-
 0. Présentation
-~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~
+
 Ce projet django comporte trois volets principaux :
 - L'app apis
 	Du latin 'abeille', l'industrieuse invétérée qui transforme
@@ -27,20 +25,19 @@ Ce projet django comporte trois volets principaux :
 	les PJ et PNJ pour montrer et entretenir leurs contacts.
 
 
-~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~
+
 I. Précautions
-~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~
-- S'assurer qu'on est seul à travailler sur l'appli. Sur ssh:
-	who
-	# Permet d'afficher les utilisateurs connectés
+
+- S'assurer qu'on est seul à travailler sur l'appli. Sur ssh: who 
+Permet d'afficher les utilisateurs connectés
 
 - Si on n'est pas seul, ne pas uploader tout le dossier shade mais
 	seulement les dossiers qu'on a modifié et qu'on sait modifiés
 	uniquement par nous mêmes.
 
-~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~
+
 II. Devenir raffineur avec apis
-~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~
+
 1 - Si une donnée brute intéressante est trouvée
 	- Créer un nouveau dossier ###_raw dans shade/apis/raw
 		avec ### le nombre à la suite de ceux existants.
