@@ -25,8 +25,8 @@ class FirstName(models.Model):
         (2 , 'homme') )
     origin_choice  = (
         (1 , 'Pays clémentin , Ravénie , Lombrie' ) ,
-        (2 , 'Ostrie, Thémésie, Lagashein'        ) ,
-        (3 , 'Empire du Roi-Lune'                 ) )
+        (2 , 'Ostrie, Thémésie, Lagashein' ) ,
+        (3 , 'Empire du Roi-Lune' ) )
 
     # Attributs
     uid = models.AutoField(primary_key = True , db_index = True)
@@ -37,6 +37,8 @@ class FirstName(models.Model):
     # Méthodes
     def __str__(self):
         return str(self.name)
+    def __repr__(self):
+        return list(self.name , self.genre , self.origin)
 
 #####################################################################
 # Classe de nom (geom : False)
@@ -49,9 +51,9 @@ class LastName(models.Model):
 
     # Variables pour les choix pré-remplis
     origin_choice  = (
-    (1 , 'Pays clémentin , Ravénie , Lombrie' ) ,
-    (2 , 'Ostrie, Thémésie, Lagashein'        ) ,
-    (3 , 'Empire du Roi-Lune'                 ) )
+        (1 , 'Pays clémentin , Ravénie , Lombrie' ) ,
+        (2 , 'Ostrie, Thémésie, Lagashein'        ) ,
+        (3 , 'Empire du Roi-Lune'                 ) )
 
     # Attributs
     uid = models.AutoField(primary_key = True , db_index = True)
