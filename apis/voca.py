@@ -1,8 +1,10 @@
+# -*- coding: utf-8 -*-
 # voca.py
 # Python 3.4.3
 # Django 1.9
 # Script rassemblant des fonctions python3 pour modifier les fichiers
 #   des dossiers ###_raw
+
 
 #####################################################################
 # README !
@@ -19,7 +21,7 @@
 #####################################################################
 
 log = ''
-headerConstant = 'HEADER='
+headerConstant = 'HEADER;'
 
 #####################################################################
 def WorkPath():
@@ -178,14 +180,8 @@ def StrValidator(list): # WIP NE PAS UTILISER
         
         # Si input différent de vide ou 'c', string confirmé et éliminé.
         else:
-            line_eliminated_valid = input('Eliminer {} ? o/n : '.format(line))
-            if line_eliminated_valid in ['o','O','y','Y']:
-                print('String éliminé.')
-                counter_eliminated += 1
-            else: 
-                print('String validé.')
-                out_list.append(line)
-                counter_valid += 1
+            print('String éliminé.')
+            counter_eliminated += 1
 
     # Ajout du log
     AddLog('corpus', 'Lignes validées : {}'.format(counter_valid))

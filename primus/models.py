@@ -33,6 +33,7 @@ class FirstName(models.Model):
     name = models.CharField(max_length = 50 , unique = True)
     genre = models.PositiveIntegerField(choices = genre_choice)
     origin = models.PositiveIntegerField(choices = origin_choice)
+    use_count = models.PositiveIntegerField(null = True , default = 0)
     
     # Méthodes
     def __str__(self):
@@ -59,6 +60,7 @@ class LastName(models.Model):
     uid = models.AutoField(primary_key = True , db_index = True)
     name = models.CharField(max_length = 50 , unique = True)
     origin = models.PositiveIntegerField(choices = origin_choice)
+    use_count = models.PositiveIntegerField(null = True , default = 0)
     
     # Méthodes
     def __str__(self):

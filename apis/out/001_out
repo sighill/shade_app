@@ -1,3 +1,4 @@
+HEADER;town
 Castel San Giovanni
 Serramazzoni
 Viano
@@ -6,7 +7,7 @@ Borghi
 Montiano
 Mirandola
 Faenza
-Sant`Agata Bolognese
+Sant'Agata Bolognese
 Ravenna
 Cervia
 Premilcuore
@@ -30,7 +31,7 @@ Pecorara
 Monghidoro
 Lama Mocogno
 Ravarino
-Castelnovo Ne`Monti
+Castelnovo Ne'Monti
 Savignano Sul Rubicone
 Russi
 Santarcangelo Di Romagna
@@ -55,7 +56,7 @@ Castel Guelfo Di Bologna
 Rocca San Casciano
 Calestano
 Castrocaro Terme E Terra Del Sole
-Fiorenzuola D`Arda
+Fiorenzuola D'Arda
 Pianoro
 San Clemente
 Crevalcore
@@ -86,7 +87,7 @@ Mordano
 Mercato Saraceno
 Cadeo
 Fontevivo
-Castel D`Aiano
+Castel D'Aiano
 Comacchio
 Medicina
 Sassuolo
@@ -100,7 +101,7 @@ San Mauro Pascoli
 Bastiglia
 Casalgrande
 Portomaggiore
-Lesignano De`Bagni
+Lesignano De'Bagni
 Gambettola
 Baiso
 Scandiano
@@ -115,7 +116,7 @@ Berceto
 Correggio
 Castenaso
 Rimini
-Monticelli D`Ongina
+Monticelli D'Ongina
 Bagno Di Romagna
 Cortemaggiore
 Vezzano Sul Crostolo
@@ -161,7 +162,7 @@ Cesenatico
 Roccabianca
 San Possidonio
 Vernasca
-Ponte Dell`Olio
+Ponte Dell'Olio
 Saludecio
 Poggio Berni
 Marzabotto
@@ -192,7 +193,7 @@ Montescudo
 Castello Di Serravalle
 Borgonovo Val Tidone
 Ramiseto
-Ozzano Dell`Emilia
+Ozzano Dell'Emilia
 Boretto
 Berra
 Farini
@@ -202,11 +203,11 @@ Nonantola
 Casola Valsenio
 Bentivoglio
 Formignana
-Sant`Agostino
+Sant'Agostino
 Valmozzola
 Massa Fiscaglia
 Portico E San Benedetto
-Anzola Dell`Emilia
+Anzola Dell'Emilia
 Piozzano
 Vignola
 Albinea
@@ -217,7 +218,7 @@ Pavullo Nel Frignano
 Fiorano Modenese
 Forlimpopoli
 Tresigallo
-San Polo D`Enza
+San Polo D'Enza
 Zibello
 Carpineti
 Fontanelice
@@ -244,12 +245,12 @@ Prignano Sulla Secchia
 Rio Saliceto
 Longiano
 Casteldelci
-Sant`Agata Sul Santerno
+Sant'Agata Sul Santerno
 Terenzo
 Casalecchio Di Reno
 Tizzano Val Parma
 Fusignano
-Granarolo Dell`Emilia
+Granarolo Dell'Emilia
 Riolo Terme
 Sasso Marconi
 Formigine
@@ -258,7 +259,7 @@ Pieve Di Cento
 Rottofreno
 Trecasali
 Castelnovo Di Sotto
-Forli`
+Forli'
 Piacenza
 Molinella
 Castel Maggiore
@@ -271,7 +272,7 @@ Maiolo
 Cotignola
 Sarmato
 San Giorgio Di Piano
-Castell`Arquato
+Castell'Arquato
 Carpi
 Zola Predosa
 Polinago
@@ -283,9 +284,9 @@ Montegridolfo
 Monteveglio
 Bondeno
 Corniglio
-Lugagnano Val D`Arda
+Lugagnano Val D'Arda
 Cavezzo
-Sant`Ilario D`Enza
+Sant'Ilario D'Enza
 Pellegrino Parmense
 Solarolo
 Guastalla
@@ -319,12 +320,12 @@ Colorno
 Alfonsine
 Marano Sul Panaro
 San Prospero
-Castello D`Argile
+Castello D'Argile
 Ostellato
 Bazzano
-Reggio Nell`Emilia
+Reggio Nell'Emilia
 Bagnacavallo
-Varano De`Melegari
+Varano De'Melegari
 Pievepelago
 Loiano
 Sorbolo
@@ -339,7 +340,7 @@ Lizzano In Belvedere
 Cattolica
 Castel Del Rio
 Castellarano
-Villanova Sull`Arda
+Villanova Sull'Arda
 Argenta
 Baricella
 Quattro Castella

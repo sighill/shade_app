@@ -1,0 +1,29 @@
+######################################################################
+Début du nettoyage du fichier
+    ###################################
+    Début de la fonction StringFormatter
+        GIUSEPPE --> Giuseppe.
+        ANTONIO --> Antonio.
+        GIOVANNI --> Giovanni.
+        FRANCESCO --> Francesco.
+        LUIGO --> Luigo.
+        MARIO --> Mario.
+        SALVATORE --> Salvatore.
+        VINCENZO --> Vincenzo.
+        ANGELO --> Angelo.
+        PAOLO --> Paolo.
+        ROBERTO --> Roberto.
+        PIETRO --> Pietro.
+        FRANCO --> Franco.
+        DOMENICO --> Domenico.
+        CARLO --> Carlo.
+        MICHELE --> Michele.
+        MARCO --> Marco.
+        BRUNO --> Bruno.
+        GIORGIO --> Giorgio.
+    ###################################
+    Début de la fonction OutFileCreate
+        Le header sera: HEADER;FirstName;homme;Pays clémentin , Ravénie , Lombrie
+
+        Création du fichier 004_out
+        Création du fichier 004_log

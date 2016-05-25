@@ -1,11 +1,10 @@
+# -*- coding: utf-8 -*-
 # 004_cleaner.py
-#####################################################################
+#J'ai tout fait à la main sérieux la loose
 
-##################################
-# Import des modules et ajout du path de travail pour import relatif
 import sys
 sys.path.insert(0 , 'D:/Projets/shade_django/apis/')
-from voca import AddLog , StringFormatter , OutFileCreate , OdditiesFinder
+from voca import AddLog , StringFormatter , OutFileCreate
 
 ##################################
 # Init des paths et noms de fichiers
@@ -19,21 +18,14 @@ raw_file = 'src'
 raw_list = open(work_dir + raw_file , 'r').read().splitlines()
 
 ##################################
-# Séparation des prénoms masculins et féminins
-m_name = []
-f_name = []
-
-# Pour chaque mot de chaque ligne de la liste raw
-# On checke la dernière lettre du mot
-# S'il termine par o e ou i --> m_name
+# Formatage du texte
+# Init de la list contenant la sortie de StringFormatter
+formatted_list = []
+AddLog('subtitle' , 'Début de la fonction StringFormatter')
 for line in raw_list:
-	word_list = list(line)
-	for word in word_list:
-		if word[-1:] in ['o','O','i','I','e','E']:
-			m_name.append(word)
-		elif word[-1:] in ['a','A']:
-			f_name.append(word)
-		else:
-			pass
+	formatted_list.append(StringFormatter(line))
 
-# WIP ! Je commence primus pour voir comment construire les fichiers out.
+##################################
+# Enregistrement des fichiers sortie
+AddLog('subtitle' , 'Début de la fonction OutFileCreate')
+OutFileCreate('D:/Projets/shade_django/apis/out/','004_src',formatted_list,'FirstName;homme;Pays clémentin , Ravénie , Lombrie')

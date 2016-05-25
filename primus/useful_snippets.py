@@ -79,3 +79,18 @@ list(set(chain.from_iterable(
     # GenericForeignKey from the results.
     if not (field.many_to_one and field.related_model is None)
 )))
+
+
+cd /home/common/shade
+git add --all && git commit -all -m ''
+git push shade_app master
+
+from primus.ostium import *
+importDataIntoDB(FirstName)
+
+kwargs = {}
+kwargs['genre'] = 2
+kwargs['origin'] = 1
+kwargs['name'] = 'John'
+obj_a_creer = FirstName(**kwargs)
+obj_a_creer.save()
