@@ -1,24 +1,18 @@
-008_mission
+016_mission
 #####################################################################
 # INFOS
 #####################################################################
 Le fichier src comporte une extraction de la page :
 http://www.gens.info/italia/it/nomi?nom_action=a&nom_l=A
-Ce sont des prénoms masculins, féminins non différenciés
-
 CETTE MISSION EST LE DUPLICAT DE 008
-MAIS UNIQUEMENT POUR LES PRENOMS FEMININS
+MAIS UNIQUEMENT POUR LES PRENOMS MASCULINS
 
 #####################################################################
 # OBJECTIF
 #####################################################################
 Extraire les prénoms et les différencier (H/F):
 
-RIPPER LES PRENOMS FEMININS
-
-- Utiliser des règles simples pour faire le plus gros du travail
-	de différenciation H/F : les prénoms finissant par A sont
-	féminins par exemple. 
+RIPPER LES PRENOMS MASCULINS
 
 - Un seul nom par ligne, sans en-tête
 

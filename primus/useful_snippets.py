@@ -94,3 +94,30 @@ kwargs['origin'] = 1
 kwargs['name'] = 'John'
 obj_a_creer = FirstName(**kwargs)
 obj_a_creer.save()
+
+
+
+#####################################################################
+# Classe de ressource de noms pour la classe Town
+#####################################################################
+class AssetTown(models.Model):
+    '''
+        AssetTown regroupe les noms de ville possibles pour des
+        entités de Town.
+    '''
+    # TODO 
+
+    # Variables pour les choix pré-remplis
+    origin_choice  = (
+        (1 , 'Pays clémentin , Ravénie , Lombrie' ) ,
+        (2 , 'Ostrie, Thémésie, Lagashein'        ) ,
+        (3 , 'Empire du Roi-Lune'                 ) )
+    # Attributs
+    uid = models.AutoField(primary_key = True , db_index = True)
+    name = models.CharField(Template)
+    origin = models.PositiveIntegerField(choices = origin_choice)
+    used = models.BooleanField(initial = False)
+
+    # Methodes
+    def __str__(self):
+        return str(self.name)

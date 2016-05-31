@@ -1,3 +1,4 @@
+-- Copié dans le tableur
 PNJ Ambassadeur des reines veuves
 'Souffrez d'un peu de pitié Madame, vous savez bien que mon cœur ferd sa raison lorsque vous souriez ainsi... '
 24 ans
@@ -22,31 +23,220 @@ Pt de vie : 6
 
 'Interprétation : vous êtes le point de mire de toute la coup, à mille lieues de- l'image raciste que les Néolins entretiennent à l'égard du peuple élu de la Lumière. Certes, vous avez la beauté exotique de Thémée : de la noirceur de votre peau à votre crinière immaculée et vos yeux d'opale - les veuves, les duchesses adultères et les jeunes pucelles qui se jettent sur vous sont là pour en attester. Mais vous êtes très ouvert d'esprit... et de moeurs. Pas plus fier ni arrogant qu'un autre. La religion ? Vous ne l'oubliez pas. Pas plus que les intérêts du clergé thémésien. Mais autant s'en acquitter au plus vite pour que ces harpies vous laissent en paix. Parler des Flammes ne fait pas recette. En revanche, narrer ce que vous éprouvez lorsque le soleil se couche sur les sables orangés du désert alors que la nuit exhale ses premiers souffles de fraîcheur...'
 
-'Equipement : Robe somptueuse, jabot de dentelles. Parure et bijoux hors de prix. Canne (creuse, compartiment secret). Bourse bien garnie.'
+Robe somptueuse;jabot de dentelles;Parure et bijoux hors de prix;Canne (creuse, compartiment secret);Bourse bien garnie
 
 Compétences :
-Urbanité (clergé) 4
-Urbanité (noblesse) 4
-Intrigues 4
-Patois thémésien 4
-Séduction 3
-Missives 3
-Éloquence 3
-Théologie (lumière) 3
-Horadrique 3
-Art (danse) 2
-Jeux 2
-Marchandage 2
-Bagou 2
-Lire et écrire 2
-Ragots 2
-Science (Philosophie) 2
-Ladriel 2
-Voyage 1
-Vigilance 1
-Héraldique 1
-Boisson 1
-Déguisement 1
+Urbanité (clergé):4;Urbanité (noblesse):4;Intrigues:4;Patois thémésien:4;Séduction:3;Missives:3;Éloquence:3;Théologie (lumière):3;Horadrique:3;Art (danse):2;Jeux:2;Marchandage:2;Bagou:2;Lire et écrire:2;Ragots:2;Science (Philosophie):2;Ladriel:2;Voyage:1;Vigilance:1;Héraldique:1;Boisson:1;Déguisement:1;
+
+----------------------------------------------------------------------------------------------
+-- Copié dans le tableur
+Chevalier Ravénien
+24
+Rang 2 - Noblesse d'épée
+Vétéran
+Beauté : -
+héroïsme : 1
+
+Une chevelure aux boucles de jais, rattachée en catogan. Des traits carrés cachés sous une barbe noire à la mode d'Agostine et l'œil luisant du loup. De ses vêtements précieux mais sobres à ses manières, tout trahit en lui une force et une détermination à la limite du fanatisme.
+
+Le chevalier ravénien pense incarner les vestiges d'une noblesse lumineuse, courageuse, juste et honorable, mais à jamais perdue à cause des bourgeois, des mariages consanguins, des ombres et des Ténébrosi, des armes à feu... Rayez la mention inutile. Le chevalier s'accroche à son honneur comme un enfant terrifié de lâcher la main de sa mère, dans un monde en perpétuelle évolution qui le dépasse et le relègue au rang de fieux débris... Tout ce qui est synonyme de modernité ou de changement représente un danger potentiel à ses yeux.
+
+Armure lourde intégrale,Masse d'arme,Lance de cavalerie,Epée et pavois,Destrier caparaçonné
+
+Équitation:3,Escrime:3,Mêlée (lances):3,Commandement:3,Chasse:3,Bouclier:2,Jeux:2,Mêlée (masses d'arme):2,Héraldique:2,Boisson:2,Lire et écrire:2,Horadrique:2,Théologie (lumière):1,Intrigues:1,Esquive:1,Travaux agricoles:1
+
+----------------------------------------------------------------------------------------------
+-- Copié dans le tableur
+
+Jeune loup ambitieux
+17 ans, Noblesse de lettre Rang 3 (noblesse de lettre)
+Beauté : -
+Héroïsme : 0
+
+Urbanité (Noblesse):3,Séduction:3,Athlétisme:2,Bagarre:2,Bagou:2,Intrigues:2,Lire et écrire:2,Missives:2,Escrime:2,Équitation:2,Patois clémentin:2,Poison:1,Intendance:1,Ladriel:1,Art (danse):1,Horadrique:1,Jeux:1
+
+Belle tunique et dentelles, Rapière et main gauche, Masque de cuir
+
+Jeune roquet à la tunique sombre mais dont la qualité d'étoffe et la coupe souligne la noblesse de naissance. Son regard âgé et sa moue soucieuse jurent avec son visage encore juvénile. Bien qu'il sorte rarement sans serviteurs, il porte fièrement une rapière à l'acier rayé.
+
+More : école d'escrime Orsini
+Noblesse / Basique
 
 
+----------------------------------------------------------------------------------------------
+-- Copié dans le tableur
 
+Un noble monsieur aux manières et à la mine discrète. De sa silhouette rondouillette à ses manières précieuses ou à ses incessantes citations historiques, tout en lui trahit le lettré ! Il se promène avec une loupe dans sa manche, attachée à une chaînette d'argent. Certains pairs dilapident leur fortune dans les cargaisons stéléniennes, la scopa, la guerre ou les courtisanes. Ceux-là même qui vous jugent fou et pédant, incapables de voir au-delà de votre «collectionnite aiguë». Certes, les œuvres et l'entretien d'une cour d'artistes coûtent des fortunes. Mais c'est le prix à payer pour restaurer l'éclat d'un monde vendu aux rouelles, reflet décadent d'une histoire autrefois glorieuse.
+Beauté : -
+Héroïsme : 0
+Noblesse/Vétéran
+Mécène
+Robe épaisse et petit souliers vernis,Rapière d'apparat (pièce de collection),Bourse bien garnie,Loupe montée en monocle
+
+Marchandage (art):4,Art (sculpture):4,Science (histoire tarque):4,Art (peinture):3,Missives:3,Ladriel:3,Théologie (ténèbres):3,Eloquence:3,Lire et écrire:3,Urbanité (noblesse):2,Urbanité (clergé):2,Horadrique:2,Contes et légendes:2,Théologie (lumière):1,Science (Philosophie):1
+
+----------------------------------------------------------------------------------------------
+-- Copié dans le tableur
+
+Noblesse / vétéran
+Vassal
+35 ans, Noblesse d'épée Rang 2 (noblesse d'épée)
+
+Chasse:3,Equitation:3,Héraldique:3,Mêlée (lance):3,Mêlée (masse d'arme):2,Bouclier:2,Jeux:2,Boisson:2,Travaux agricoles:2,Intendance:2,Urbanité (Noblesse):1,Escrime:1,Lire et écrire:1,Prévisions:1
+
+Tunique vieillotte,quelques breloques,Epée
+
+Une brute épaisse dans une tunique brocardée, usée et largement passée de mode. Une calvitie couronnant un visage épais à la barbe sombre et aux sourcils broussailleux. Toujours une arme à portée de main. Le sud pullule de petits vassaux, prêts à s'étriper au premier souci de frontières. Ce genre de nobliaux règne en petit tyran sur sa famille et son lopin de terre, calmant ses ardeurs à la chasse, dans la boisson et, pour beaucoup, en violant les filles de leurs serfs. Il attend que la guerre lui donne l'occasion d'étancher sa soif de violence et de démontrer la «virilité» qui justifie la «noblesse» de son sang.
+
+Beauté : -	Héroïsme : 1
+
+
+----------------------------------------------------------------------------------------------
+-- Copié dans le tableur
+
+Prince lisselbergeois
+Noblesse / Basique
+Beauté: Très beau	Héroïsme : 0
+16 ans, Noblesse de lettre Rang 4 (haute noblesse)
+
+Urbanité (Noblesse):3,Jeux:2,Lire et écrire:2,Horadrique:2,Missives:2,Ladriel:2,Séduction:1,Héraldique:1,Escrime:1,Intrigues:1,Art (danse):1
+
+Vêtements somptueux,Rapière d'aparat,Gonfalon orné d'une énorme plume,Bourse bien garnie
+
+Beau jeune homme coupé et rasé de frais, habillé d'une somptueuse tunique à la dernière mode, entièrement brodée et parée de pierreries. Le teint légèrement poudré. Le port altier et la mine arrogante contrastant avec son regard bleu, délavé par une profonde tristesse. Votre père le Duc jouit d'une santé de fer et n'aime pas la guerre. Pire, il a remplacé votre défunte mère par une charmante épouse qui est de dix ans votre cadette. De quoi lui rendre son ardeur et vous éloigner, encore et toujours, de l'héritage qui vous revient. A quoi bon etre noble si c'est pour n'avoir aucune prise sur les affaires de la famille, ni droit de siège au conseil ? Alors vous trompez l'ennui dans des fêtes. Vous vous cultivez, mais les collections d art ont leurs limites. Vous cherchez de vrais amis. Mais vos connaissances ont d'avantage d'affection pour votre bourse que pour votre personnalité. Vous vous inventez des complots et des ennemis. Sans parvenir à vous convaincre. Il n'y a rien de pire que l'ennui !
+
+
+----------------------------------------------------------------------------------------------
+-- Copié dans le tableur
+
+Vieille princesse clémentine
+Noblese / Vétéran
+Beauté: - Héroïsme : 0
+63 ans, Noblesse de lettre Rang 4 (haute noblesse)
+
+Urbanité (noblesse):5,Intrigues:5,Ragots:4,Art (danse):3,Connaissance de Clémence:3,Urbanité (clergé):3,Jeux (scopa):3,Séduction:3,Missives:3,Vigilance:2,Éloquence:2,Théologie (lumière):2,Lire et écrire:2,Horadrique:2,Ladriel:2,Missives:2,Science (Philosophie):2,Héraldique:1,Urbanité (guilde):1,Art (musique/ luth):1,Marchandage :1,Théologie (ténèbres):1,Bagou:1
+
+Robe somptueuse,Parure et bijoux hors de prix,Loup brodé d'or et de dentelle,Éventail,Jeu de scopa
+
+Sa beauté s'est flétrie, mais elle reste évidente, comme le vestige d'une époque fastueuse où la princesse, jeune veuve, faisaient tourner les têtes du tout Clémence. Si sa longue chevelure a viré à l'argent depuis, ses yeux noisette n'ont rien perdu de leur intelligence et de leur attraction magnétique. Ses parures valent à elles seules le prix d'un domaine de Lombrie, mais ne trahissent jamais l'élégance et le bon goût. Le clinquant est l'apanage des anciens pauvres, ces parvenus qu'elle méprise tant. La princesse est une de ces femmes qui entretiennent l'aura sulfureuse de Clémence, célèbre pour ses aventurières ambitieuses qui font et défont les fortunes. Son sexe ne la disposait pas à régner sur sa famille et pourtant, la princesse a su user de sa beauté et sa malice pour se hisser dans l'ombre du Doge. Les femmes ont l'interdiction de siéger au conseil, mais tout le monde sait que c'est cette veuve, et non son frère aîné, qui dirige les affaires de la famille et du sestiere.
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+Fanatique des rayons ardents
+Clergé lumineux / Basique
+30 ans, Dévot ou popolo minuto Rang 1 (dévot ou popolo minuto)
+Beauté : -	Héroïsme : 0
+Lombrien pansu au visage déformé par la haine et aux manières bourrues. Vêtu comme un forgeron, avec un long tablier et des gants de cuir pour allumer ses incendies. Une masse ou une dague dans une main, une torche dans l'autre.
+
+Les jolies prêtresses n'ont pas droit de faire violence. Pas de problème, c'est votre devoir de les défendre. Et comme la chienlit ténébreuse est partout, autant prendre les devants en anticipant leurs attaques. Les vieilles prêtresses vous fustigent d'être un fou, un intégriste qui interprète les saintes écritures comme bon lui semble. La religion est si pratique lorsqu'il s'agit d'aller se faire le poing sur ces chiens galleux de Ténébrosi ! Qu'on vous donne un tonneau de poix et vous débarrasserez la Terre de cette petite chapelle de Sélène en construction dans le voisinage...
+
+Bagarre:2,Couteau:2,Mêlée (masse):2,Esquive:2,Boisson:2,Vigilance:2,Patois lombrien:2,Connaissance (Trévoletta):2,Théologie (lumière):1,Athlétisme:1,Discrétion:1
+
+Matraque,Flasque d'huile et briquet,Dague,Médaillon de Thémésia
+
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur
+
+----------------------------------------------------------------------------------------------
+-- Non copié dans le tableur

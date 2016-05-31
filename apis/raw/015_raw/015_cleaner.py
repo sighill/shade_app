@@ -20,15 +20,23 @@ separated_names_list = []
 for line in raw_list:
     line_names = line.split('' '\t')
     for name in line_names:
-        name.decode('utf8')
         separated_names_list.append(name)
+
+##################################
+# Choix des prénoms uniquement masculins
+men_name_list = []
+for line in separated_names_list:
+	if line[-1:] in ['A' , 'a']:
+		pass
+	else:
+		men_name_list.append(line)
 
 ##################################
 # Formatage du texte
 # Init de la list contenant la sortie de StringFormatter
 formatted_list = []
 AddLog('subtitle' , 'Début de la fonction StringFormatter')
-for line in separated_names_list:
+for line in men_name_list:
     formatted_list.append(StringFormatter(line))
 
 ##################################
@@ -42,15 +50,6 @@ AddLog('subtitle' , 'Début de la fonction StrValidator')
 validated_list = StrValidator( list_without_oddities )
 
 ##################################
-# Séparation des genres, pour l'instant on ignore les prénoms masculins
-ref_list = []
-for item in validated_list:
-    if item[-1:] == 'a':
-        ref_list.append(item)
-    else:
-        pass
-
-##################################
 # Enregistrement des fichiers sortie
 AddLog('subtitle' , 'Début de la fonction OutFileCreate')
-OutFileCreate('D:/Projets/shade_django/apis/out/','004_src',ref_list,'FirstName;homme;Pays clémentin , Ravénie , Lombrie')
+OutFileCreate('D:/Projets/shade_django/apis/out/','015_src',validated_list,'FirstName;homme;Pays clémentin , Ravénie , Lombrie')

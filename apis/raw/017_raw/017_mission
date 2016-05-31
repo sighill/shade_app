@@ -1,0 +1,24 @@
+017_mission
+#####################################################################
+# INFOS
+#####################################################################
+Gros rip de communes d'Italie sur wikipedia
+https://fr.wikipedia.org/wiki/Liste_des_communes_d'Italie
+
+#####################################################################
+# OBJECTIF
+#####################################################################
+Nettoyer la donnée, ya pas grand chose à faire.
+
+
+#####################################################################
+# REGLES GENERALES
+#####################################################################
+
+- Le processus de raffinage ne doit pas altérer le fichier source
+
+- Tous les scripts de nettoyage doivent être dans le dossier ###_raw 
+	et si possible les commenter pour réutilisation
+
+- Les fichiers de donnée raffinée doivent être placés dans
+	/home/common/shade/apis/out/
