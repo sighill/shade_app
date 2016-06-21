@@ -4,11 +4,13 @@
 # Imports
 import os.path
 # Our custom models
-from primus.models import FirstName , LastName , Archetype , Continent , Town , District , Island , Path , Street , Building , Test
+from primus.models import *
 # To catch duplicate entries and deal with it
 from django.db import IntegrityError
 # to catch more exceptions by django see https://docs.djangoproject.com/fr/1.9/ref/exceptions/#django.core.exceptions.FieldDoesNotExist for more
 from django.core.exceptions import FieldDoesNotExist
+# Récupérer les dicos
+from primus.dict import *
 
 # Constantes
 # Liste des tables valides
@@ -23,6 +25,7 @@ VALID_TABLES = [ 'FirstName' ,
                  'Path'      ,
                  'Street'    ,
                  'Building'  ,
+                 'AssetPlace',
                  'Test'      ]
 
 #################################################################################
@@ -43,12 +46,15 @@ def getApisOutFilePath():
     return file_path
 
 #################################################################################
-# Fonction qui vérifie si le fichier est présent et pas importé
-# in: le chemin du fichier
-# out: la validité ou non du fichier / la liste des keywords du header /
-# la liste des strings lues dans le corps du fichier
+
 #################################################################################
 def checkApisOutFileValidity( file_path ):
+    """
+        Fonction qui vérifie si le fichier est présent et pas importé
+        in: le chemin du fichier
+        out: la validité ou non du fichier / la liste des keywords du header /
+        la liste des strings lues dans le corps du fichier
+    """
     header_keywords = []
     file_content = []
 
@@ -75,12 +81,15 @@ def checkApisOutFileValidity( file_path ):
     # TODO : attraper d'autres erreurs potentielles !
 
 #################################################################################
-# Fonction qui vérifie la validité du header (et propose à l'utilisateur d'en
-# entrer un à la main si nécessaire)
-# in: la liste des keywords du header
-# out: la table de destination (ou un string vide si le header est invalide)
+
 #################################################################################
 def analyseHeader( header_keywords ):
+    """
+        Fonction qui vérifie la validité du header (et propose à l'utilisateur d'en
+        entrer un à la main si nécessaire)
+        in: la liste des keywords du header
+        out: la table de destination (ou un string vide si le header est invalide)
+    """
     table_destination = ""
 
     # ici : si la longueur du set qui retourne l'intersection des deux listes
@@ -107,19 +116,22 @@ def analyseHeader( header_keywords ):
     return table_destination
 
 #################################################################################
-# Fonction qui détermine selon quelle méthode les données lues seront importées
-# dans la DB
-# in: la table de destination / la liste des keywords du header / la liste des
-# strings lus dans le fichier
-# out: l'insertion a-t-elle été un succès ou non ?
+
 #################################################################################
 def importDataIntoDB( table_destination, header_keywords, file_content ):
+    """
+        Fonction qui détermine selon quelle méthode les données lues seront importées
+        dans la DB
+        in: la table de destination / la liste des keywords du header / la liste des
+        strings lus dans le fichier
+        out: l'insertion a-t-elle été un succès ou non ?
+    """
 
-    if( table_destination == "FirstName" or table_destination == "LastName" or table_destination == "Test" ):
+    if table_destination in ["FirstName" , "LastName" , "Test" , "AssetPlace" ]:
         print('\nPour ce type de données, on insère de nouvelles lignes dans la table associée.')
         return inportDataIntoDBInsert( table_destination, header_keywords, file_content )
 
-    elif ( table_destination ==  "Archetype"):
+    elif table_destination ==  "Archetype":
         print('\nPour ce type de données, si j\'ai bien compris, il faut les insérer à la mano!')
         return False
 
@@ -242,19 +254,59 @@ def inportDataIntoDBInsert( table_destination, header_keywords, file_content ):
 # out: l'insertion a-t-elle été un succès ou non ?
 #################################################################################
 def inportDataIntoDBReplace( table_destination, header_keywords, file_content ):
-    # TODO
-
-    # Importation de la donnée dans une variable
-
-    # Importation des objets Town dont le champ 'name' est null dans une variable
-
-    # Boucle for sur chacun des objets et attribution d'une string 'name'
-
-        # Le champ 'name' possède une contrainte d'unicité. On intercepte
-        # l'exception IntegrityError si le name est déjà utilisé
-
+    """
+        Fonction d'attribution de noms à des instances de classes
+        PRIMUS déja existantes dans la base de données.
+        Dans cette fonction on utilise des préfixes d'origine pour
+        mieux s'y retrouver. 
+        Pour rappel, voici les correspondances :
+        Code pays | Nom pays     | Code origine | Préfixe
+            1     | E. Roi-Lune  |      3       | moonking_
+            2     | Lagashein    |      2       | ostrian_
+            3     | Lombrie      |      1       | clementine_
+            4     | Ostrie       |      2       | ostrian_
+            5     | P. clémentin |      1       | clementine_
+            6     | Ravénie      |      1       | clementine_
+            7     | Thémésie     |      2       | ostrian_
+    """
+    # PREFETCH
+    # On crée des querysets en avance pour ne pas taper dans 
+    # la db à chaque instance de name.
+    # TODO : voir si c'est vraiment efficace !!!
+    raw_clementine_names = AssetPlace.objects.filter(
+        origin = 1 , use_count = 0)
     
-    return False
+    raw_ostrian_names = AssetPlace.objects.filter(
+        origin = 2 , use_count = 0)
+    
+    raw_moonking_names = AssetPlace.objects.filter(
+        origin = 3 , use_count = 0)
+
+    # Pour chaque instance de la classe dont le champ 'name' 
+    # est <null> on récupère l'allegiance (code pays) 
+    # pour en tirer l'origine via primus.dict.origin_dict
+    # Ensuite on choisit au hasard un name de AssetPlace 
+    # qui correspond au critère origin et on l'insère dans
+    # le champ name de l'instance avec ou sans décoration
+    for instance in target_class.objects.filter(name = None):
+
+        # On récupère le code origine à partir du pays d'allegiance
+        instance_origin = origin_dict[instance.allegiance]
+        
+        # Import du queryset prefetch dans raw_names
+        if instance_origin == 1:
+            raw_names = raw_clementine_names
+        elif instance_origin == 2:
+            raw_names = raw_ostrian_names
+        else:
+            raw_names = raw_moonking_names
+
+        # Mise à jour de l'objet avec chosen_name décoré ou pas
+        instance.name = choice(raw_names)
+        # Commit
+        instance.save()
+
+    return True
 
 #################################################################################
 # Add 'imported' to the file header

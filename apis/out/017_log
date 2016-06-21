@@ -1,0 +1,8 @@
+######################################################################
+Début du nettoyage du fichier
+    ###################################
+    Début de la fonction OutFileCreate
+        Le header sera: HEADER;AssetPlace;Pays clémentin , Ravénie , Lombrie
+
+        Création du fichier 017_out
+        Création du fichier 017_log

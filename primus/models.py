@@ -159,13 +159,32 @@ class Grid(models.Model):
     # TODO 
 
     # Variables pour les choix pré-remplis
-
+    terrain_choices = ( ( 1 , 'Colline'        ) ,
+                        ( 2 , 'Désert'         ) ,
+                        ( 3 , 'Forêt'          ) ,
+                        ( 4 , 'Littoral'       ) ,
+                        ( 5 , 'Marais'         ) ,
+                        ( 6 , 'Mer intérieure' ) ,
+                        ( 7 , 'Montagne'       ) ,
+                        ( 8 , 'Océan'          ) ,
+                        ( 9 , 'Plaine'         ) )
+    
+    allegiance_choices = ( ( 1 , 'Empire du Roi-Lune' ) ,
+                           ( 2 , 'Lagashein'          ) ,
+                           ( 3 , 'Lombrie'            ) ,
+                           ( 4 , 'Ostrie'             ) ,
+                           ( 5 , 'Pays clémentin'     ) ,
+                           ( 6 , 'Ravénie'            ) ,
+                           ( 7 , 'Thémésie'           ) )
+    region_choices = (#WIP
+        )
     # Attributs
     gid = models.AutoField(primary_key = True , db_index = True)
     x = models.IntegerField(null = True)
     y = models.IntegerField(null = True)
     allegiance = models.PositiveIntegerField(null = True)
     region = models.PositiveIntegerField(null = True)
+    terrain = models.PositiveIntegerField(null= True)
     geom = gismodels.PolygonField(srid = 3857)    
     
     # Methodes
@@ -227,14 +246,14 @@ class Town(models.Model):
         Possède une géométrie ! Le champ uid devient donc gid.
     '''
     # TODO 
-
+    #
     # Variables pour les choix pré-remplis
     category_choice = (
         ( 1 , 'Capitale' ) ,
-        ( 2 , 'Cité' ) ,
-        ( 3 , 'Village' ) ,
-        ( 4 , 'Fort' ) ,
-        ( 5 , 'Fortin' ) )
+        ( 2 , 'Cité'     ) ,
+        ( 3 , 'Village'  ) ,
+        ( 4 , 'Fort'     ) ,
+        ( 5 , 'Fortin'   ) )
     # Attributs
     gid = models.AutoField(primary_key = True , db_index = True)
     name = models.CharField(max_length = 50 , null = True)
@@ -345,11 +364,11 @@ class Street(models.Model):
 
     # Variables pour les choix pré-remplis
     type_street_choice = (
-        ( 4 , 'Rue'     ) ,
-        ( 5 , 'Ruelle'  ) ,
-        ( 6 , 'Pont'    ) ,
-        ( 7 , 'Ponton'  ) ,
-        ( 8 , 'Autre'   ) )
+        ( 1 , 'Avenue'  ) ,
+        ( 2 , 'Rue'     ) ,
+        ( 3 , 'Ruelle'  ) ,
+        ( 4 , 'Pont'    ) ,
+        ( 5 , 'Ponton'  ) )
 
     # Attributs
     gid = models.AutoField(primary_key = True , db_index = True)
@@ -446,6 +465,32 @@ class Building(models.Model):
     commentary = models.CharField(null = True , max_length = 1200)
     modified = models.DateTimeField(null = True , auto_now = True)
     geom = gismodels.PointField(srid = 3857)
+
+    # Methodes
+    def __str__(self):
+        return str(self.name)
+
+#####################################################################
+# Classe de ressource de noms pour les classes de lieu
+#####################################################################
+class AssetPlace(models.Model):
+    '''
+        AssetPlace regroupe les noms possibles pour des
+        entités de Town, Street, Island et d'autres
+    '''
+    # TODO 
+
+    # Variables pour les choix pré-remplis
+    origin_choice  = (
+        (1 , 'Pays clémentin , Ravénie , Lombrie' ) ,
+        (2 , 'Ostrie, Thémésie, Lagashein'        ) ,
+        (3 , 'Empire du Roi-Lune'                 ) )
+
+    # Attributs
+    uid = models.AutoField(primary_key = True , db_index = True)
+    name = models.CharField(max_length = 100 , unique = True)
+    origin = models.PositiveIntegerField(choices = origin_choice)
+    use_count = models.PositiveIntegerField(default = 0)
 
     # Methodes
     def __str__(self):

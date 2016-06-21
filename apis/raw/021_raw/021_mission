@@ -1,0 +1,24 @@
+021_mission
+#####################################################################
+# INFOS
+#####################################################################
+Gros rip du code source des prénoms arabes sur wikipedia
+https://fr.wikipedia.org/wiki/Liste_de_prénoms_arabes
+
+#####################################################################
+# OBJECTIF
+#####################################################################
+Nettoyer la donnée à la mano
+Utiliser le script de recherche de string de 018_raw
+
+#####################################################################
+# REGLES GENERALES
+#####################################################################
+
+- Le processus de raffinage ne doit pas altérer le fichier source
+
+- Tous les scripts de nettoyage doivent être dans le dossier ###_raw 
+	et si possible les commenter pour réutilisation
+
+- Les fichiers de donnée raffinée doivent être placés dans
+	/home/common/shade/apis/out/

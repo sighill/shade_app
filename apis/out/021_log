@@ -1,0 +1,8 @@
+######################################################################
+Début du nettoyage du fichier
+    ###################################
+    Début de la fonction OutFileCreate
+        Le header sera: HEADER;FirstName;Empire du Roi-Lune
+
+        Création du fichier 021_out
+        Création du fichier 021_log

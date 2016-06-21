@@ -1,5 +1,18 @@
 /////snippets
 
+cd /home/common/shade
+python3 manage.py makemigrations && python3 manage.py migrate
+
+cd /home/common/shade
+python3 manage.py shell
+from primus.ostium import *
+from primus.models import *
+
+cd /home/common/shade
+git add --all && git commit -all -m ''
+git push shade_app master
+
+
 (  , '' ) ,
 
 
@@ -32,7 +45,11 @@ class Template(models.Model):
 5 Pays clémentin
 6 Ravénie
 7 Thémésie
-8 Nécris
+# 8 Nécris (pas un pays, ville franche)
+
+Correspondance pays <-> origin_choice
+
+origin_dict = {1:3, 2:2, 3:1, 4:2, 5:1, 6:1, 7:2}
 
 Capitales :
 1 Ishmer
@@ -42,51 +59,27 @@ Capitales :
 5 Clémence
 6 Agostina
 7 Thémée
-8 Nécris
 
 
-nextval('primus_path_gid_seq'::regclass)
+Code pays | Nom pays     | Code origine | Préfixe
+    1     | E. Roi-Lune  |      3       | moonking_
+    2     | Lagashein    |      2       | ostrian_
+    3     | Lombrie      |      1       | clementine_
+    4     | Ostrie       |      2       | ostrian_
+    5     | P. clémentin |      1       | clementine_
+    6     | Ravénie      |      1       | clementine_
+    7     | Thémésie     |      2       | ostrian_
 
 
+Agréments / préfixes / Suffixes 
+di
+del
+san
+sant
+santa
+del 
+della
 
-
-
-        /"""""\       /"""""\       /"""""\       /"""""\ 
- \...../  1.3  \...../  3.3  \...../  5.3  \...../  7.3  \.
- /"""""\       /"""""\       /"""""\       /"""""\       /"
-/  0.3  \...../  2.3  \...../  4.3  \...../  6.3  \...../ 
-\       /"""""\       /"""""\       /"""""\       /"""""\ 
- \...../  1.2  \...../  3.2  \...../  5.2  \...../  7.2  \.
- /"""""\       /"""""\       /"""""\       /"""""\       /"
-/  0.2  \...../  2.2  \...../  4.2  \...../  6.2  \...../ 
-\       /"""""\       /"""""\       /"""""\       /"""""\ 
- \...../  1.1  \...../  3.1  \...../  5.1  \...../  7.1  \.
- /"""""\       /"""""\       /"""""\       /"""""\       /"
-/  0.1  \...../  2.1  \...../  4.1  \...../  6.1  \...../ 
-\       /"""""\       /"""""\       /"""""\       /"""""\ 
- \...../  1.0  \...../  3.0  \...../  5.0  \...../  7.0  \.
- /"""""\       /"""""\       /"""""\       /"""""\       /"
-/  0.0  \...../  2.0  \...../  4.0  \...../  6.0  \...../ 
-\       /"""""\       /"""""\       /"""""\       /"""""\ 
- \...../       \...../       \...../       \...../       \.
-
-
- from itertools import chain
-list(set(chain.from_iterable(
-    (field.name, field.attname) if hasattr(field, 'attname') else (field.name,)
-    for field in LastName._meta.get_fields()
-    # For complete backwards compatibility, you may want to exclude
-    # GenericForeignKey from the results.
-    if not (field.many_to_one and field.related_model is None)
-)))
-
-
-cd /home/common/shade
-git add --all && git commit -all -m ''
-git push shade_app master
-
-from primus.ostium import *
-importDataIntoDB(FirstName)
 
 kwargs = {}
 kwargs['genre'] = 2
@@ -95,29 +88,125 @@ kwargs['name'] = 'John'
 obj_a_creer = FirstName(**kwargs)
 obj_a_creer.save()
 
+# Grid
+terrain_choices = ( ( 1 , 'Colline'        ) ,
+                    ( 2 , 'Désert'         ) ,
+                    ( 3 , 'Forêt'          ) ,
+                    ( 4 , 'Littoral'       ) ,
+                    ( 5 , 'Marais'         ) ,
+                    ( 6 , 'Mer intérieure' ) ,
+                    ( 7 , 'Montagne'       ) ,
+                    ( 8 , 'Océan'          ) ,
+                    ( 9 , 'Savane'         ) ,
+                    ( 10, 'Plaine'         ) )
 
+# FirstName
+genre_choice = (
+    (1 , 'femme') , 
+    (2 , 'homme') )
 
-#####################################################################
-# Classe de ressource de noms pour la classe Town
-#####################################################################
-class AssetTown(models.Model):
-    '''
-        AssetTown regroupe les noms de ville possibles pour des
-        entités de Town.
-    '''
-    # TODO 
+# FirstName LastName
+origin_choice  = (
+    (1 , 'Pays clémentin , Ravénie , Lombrie' ) ,
+    (2 , 'Ostrie, Thémésie, Lagashein' ) ,
+    (3 , 'Empire du Roi-Lune' ) )
 
-    # Variables pour les choix pré-remplis
-    origin_choice  = (
-        (1 , 'Pays clémentin , Ravénie , Lombrie' ) ,
-        (2 , 'Ostrie, Thémésie, Lagashein'        ) ,
-        (3 , 'Empire du Roi-Lune'                 ) )
-    # Attributs
-    uid = models.AutoField(primary_key = True , db_index = True)
-    name = models.CharField(Template)
-    origin = models.PositiveIntegerField(choices = origin_choice)
-    used = models.BooleanField(initial = False)
+# Grid LastName
+allegiance_choices = ( ( 1 , 'Empire du Roi-Lune' ) ,
+                       ( 2 , 'Lagashein'          ) ,
+                       ( 3 , 'Lombrie'            ) ,
+                       ( 4 , 'Ostrie'             ) ,
+                       ( 5 , 'Pays clémentin'     ) ,
+                       ( 6 , 'Ravénie'            ) ,
+                       ( 7 , 'Thémésie'           ) )
 
-    # Methodes
-    def __str__(self):
-        return str(self.name)
+region_choices = (#WIP
+    )
+
+# Town
+category_choice = (
+    ( 1 , 'Capitale' ) ,
+    ( 2 , 'Cité'     ) ,
+    ( 3 , 'Village'  ) ,
+    ( 4 , 'Fort'     ) ,
+    ( 5 , 'Fortin'   ) )
+
+# Street
+type_street_choice = (
+    ( 1 , 'Avenue'  ) ,
+    ( 2 , 'Rue'     ) ,
+    ( 3 , 'Ruelle'  ) ,
+    ( 4 , 'Pont'    ) ,
+    ( 5 , 'Ponton'  ) )
+
+# Path
+type_path_choices = (
+    ( 1 , 'Route'   ) ,
+    ( 2 , 'Chemin'  ) ,
+    ( 3 , 'Sentier' ) )
+
+# Archetype
+beauty_choice = (
+    ( 0 , 'Grande laideur') ,
+    ( 1 , 'Classique'     ) ,
+    ( 2 , 'Grande Beauté' ) )
+
+cast_choice = (
+    ( 1 , 'Gueux'              ) ,
+    ( 2 , 'Pègre'              ) ,
+    ( 3 , 'Popolo minuto'      ) ,
+    ( 4 , 'Popolo grasso'      ) ,
+    ( 5 , 'Clergé'             ) ,
+    ( 6 , 'Haut clergé'        ) ,
+    ( 7 , 'Haute bourgeoisie'  ) ,
+    ( 8 , 'Noblesse d\'épée'   ) ,
+    ( 9 , 'Noblesse de lettre' ) )
+
+category_choice = (
+    ( 1 , 'Basique' ) ,
+    ( 2 , 'Vétéran' ) ,
+    ( 3 , 'Elite'   ) )
+
+# Building
+category_choices = (
+    ( 1 , 'Religieux' ) , 
+    ( 2 , 'Militaire' ) ,
+    ( 3 , 'Commercial') ,
+    ( 4 , 'Bas-fonds' ) ,
+    ( 5 , 'Privé'     ) )
+subcategory_choices = (
+    ( 11 , 'Cathédrale' ) ,
+    ( 12 , 'Eglise' ) ,
+    ( 13 , 'Chapelle' ) ,
+    ( 14 , 'Temple' ) ,
+    ( 15 , 'Couvent' ) , 
+    ( 16 , 'Autre (religieux)' ) ,
+    ( 21 , 'Caserne' ) ,
+    ( 22 , 'Réserve' ) ,
+    ( 23 , 'Armurerie' ) ,
+    ( 24 , 'Dortoir' ) ,
+    ( 25 , 'Bastion' ) ,
+    ( 26 , 'Tour' ) ,
+    ( 27 , 'Autre (militaire)' ) ,
+    ( 31 , 'Entrepot' ) ,
+    ( 32 , 'Comptoir' ) ,
+    ( 33 , 'Bureau de change' ) ,
+    ( 34 , 'Boutique' ) ,
+    ( 35 , 'Taverne' ) ,
+    ( 36 , 'Autre (commercial)' ) ,
+    ( 41 , 'Planque' ) ,
+    ( 42 , 'Refuge' ) ,
+    ( 43 , 'Lieu d\'assemblée' ) ,
+    ( 44 , 'Autre (bas-fonds)' ) ,
+    ( 51 , 'Palazzo' ) ,
+    ( 52 , 'Manoir' ) ,
+    ( 53 , 'Maison bourgeoise' ) ,
+    ( 54 , 'Maison modeste' ) ,
+    ( 55 , 'Ruine' ) ,
+    ( 56 , 'Autre (privé)' ) ) 
+deity_choices = (
+    ( 1 , 'Thémésia' ) , 
+    ( 2 , 'Ohmédia'  ) ,
+    ( 3 , 'Candélia' ) ,
+    ( 4 , 'Sélène'   ) ,
+    ( 5 , 'Inconnu'  ) )

@@ -2,6 +2,8 @@
 
 0. Présentation
 
+Création rapide et user-friendly de PNJ pour le jeu de rôles Shade.
+
 Ce projet django comporte trois volets principaux :
 - L'app apis
 	Du latin 'abeille', l'industrieuse invétérée qui transforme
@@ -14,9 +16,9 @@ Ce projet django comporte trois volets principaux :
 	organisées, remplies de matière raffinée.
 	Primus utilise directement les fichiers 'out' d'apis et pose 
 	la structure qui va les accueillir.
-	Elle permet de gérer les informations dites de référentiel. 
+	Elle permet de gérer les informations de référentiel. 
 	Toutes les données raffinées sont stockées dans des tables 
-	immuables organisées.
+	postgres et qualifiées pour être utilisées convenablement.
 
 - L'app arach
 	Du personnage mythologique 'Arachné' qui tisse mieux d'Athéna
@@ -24,19 +26,16 @@ Ce projet django comporte trois volets principaux :
 	piochées dans les tables Primus. Elle s'occupera des liens entre
 	les PJ et PNJ pour montrer et entretenir leurs contacts.
 
-
-
-I. Précautions
+I. Précautions pour le co-travail
 
 - S'assurer qu'on est seul à travailler sur l'appli. Sur ssh: who 
-Permet d'afficher les utilisateurs connectés
+	Permet d'afficher les utilisateurs connectés
 
 - Si on n'est pas seul, ne pas uploader tout le dossier shade mais
 	seulement les dossiers qu'on a modifié et qu'on sait modifiés
 	uniquement par nous mêmes.
 
-
-II. Devenir raffineur avec apis
+II. Travailler avec apis
 
 1 - Si une donnée brute intéressante est trouvée
 	- Créer un nouveau dossier ###_raw dans shade/apis/raw
@@ -48,9 +47,9 @@ II. Devenir raffineur avec apis
 	- Modifier le fichier apis/_log pour y ajouter la mission 
 		et préciser son état (à faire, en cours, terminée).
 	- Synchroniser le serveur et le dossier local
-	- Raffiner la donnée
+	- Raffiner la donnée en utilisant les fonctions de apis.voca.py
 
-1 - Raffinage de la donnée : 
+2 - Raffinage de la donnée : 
 	- Règles générales :
 		- Une fois commencée, la mission doit être terminée 
 			ou abandonnée (utiliser le fichier log pour ça).
@@ -65,5 +64,3 @@ II. Devenir raffineur avec apis
 			shade/apis/out
 		- Indiquer toutes les informations intéressantes dans le
 			fichier index du dossier shade/apis/out
-
-

@@ -1,38 +1,38 @@
 
 Acqui Terme
-Albera Ligure
+Albera
 Alexandrie
 Alfiano Natta
 Alice Bel Colle
 Alluvioni Cambiò
-Altavilla Monferrato
+Monferrato
 Alzano Scrivia
 Arquata Scrivia
 Avolasca
 Balzola
 Basaluzzo
 Bassignana
-Belforte Monferrato
+Monferrato
 Bergamasco
 Berzano di Tortona
 Bistagno
 Borghetto di Borbera
-Borgo San Martino
+Borgo Martino
 Borgoratto Alessandrino
 Bosco Marengo
 Bosio
 Bozzole
-Brignano-Frascata
-Cabella Ligure
+Brignano Frascata
+Cabella
 Camagna Monferrato
 Camino
-Cantalupo Ligure
+Cantalupo
 Capriata d'Orba
 Carbonara Scrivia
 Carentino
 Carezzano
 Carpeneto
-Carrega Ligure
+Carrega
 Carrosio
 Cartosio
 Casal Cermelli
@@ -44,14 +44,14 @@ Cassano Spinola
 Cassine
 Cassinelle
 Castellania
-Castellar Guidobono
-Castellazzo Bormida
-Castelletto Merli
-Castelletto Monferrato
-Castelletto d'Erro
-Castelletto d'Orba
-Castelnuovo Bormida
-Castelnuovo Scrivia
+Guidobono
+Bormida
+Merli
+Monferrato
+Erro
+Orba
+Bormida
+Scrivia
 Castelspina
 Cavatore
 Cella Monte
@@ -68,7 +68,7 @@ Dernice
 Fabbrica Curone
 Felizzano
 Fraconalto
-Francavilla Bisio
+Bisio
 Frascaro
 Frassinello Monferrato
 Frassineto Po
@@ -97,7 +97,7 @@ Molino dei Torti
 Mombello Monferrato
 Momperone
 Moncestino
-Mongiardino Ligure
+Mongiardino
 Monleale
 Montacuto
 Montaldeo
@@ -111,7 +111,7 @@ Morbello
 Mornese
 Morsasco
 Murisengo
-Novi Ligure
+Novi
 Occimiano
 Odalengo Grande
 Odalengo Piccolo
@@ -123,7 +123,7 @@ Oviglio
 Ozzano Monferrato
 Paderna
 Pareto
-Parodi Ligure
+Parodi
 Pasturana
 Pecetto di Valenza
 Pietra Marazzi
@@ -144,20 +144,20 @@ Ricaldone
 Rivalta Bormida
 Rivarone
 Rocca Grimalda
-Roccaforte Ligure
-Rocchetta Ligure
+Roccaforte
+Rocchetta
 Rosignano Monferrato
 Sala Monferrato
 Sale
-San Cristoforo
-San Giorgio Monferrato
-San Salvatore Monferrato
-San Sebastiano Curone
-Sant'Agata Fossili
+Cristoforo
+Giorgio Monferrato
+Salvatore Monferrato
+Sebastiano Curone
+Agata Fossili
 Sardigliano
 Sarezzano
 Serralunga di Crea
-Serravalle Scrivia
+SerraScrivia
 Sezzadio
 Silvano d'Orba
 Solero
@@ -196,7 +196,7 @@ Asti
 Azzano
 Baldichieri
 Belveglio
-Berzano di San Pietro
+Berzano di Pietro
 Bruno
 Bubbio
 Buttigliera
@@ -215,11 +215,11 @@ Castel Boglione
 Castel Rocchero
 Castell'Alfero
 Castellero
-Castelletto Molina
+Molina
 Castello di Annone
-Castelnuovo Belbo
-Castelnuovo Calcea
-Castelnuovo Don Bosco
+Belbo
+Calcea
+Don Bosco
 Cellarengo
 Celle Enomondo
 Cerreto
@@ -238,7 +238,7 @@ Cortiglione
 Cossombrato
 Costigliole
 Cunico
-Dusino San Michele
+Dusino Michele
 Ferrere
 Fontanile
 Frinco
@@ -280,11 +280,11 @@ Rocca d'Arazzo
 Roccaverano
 Rocchetta Palafea
 Rocchetta Tanaro
-San Damiano
-San Giorgio Scarampi
-San Martino Alfieri
-San Marzano Oliveto
-San Paolo Solbrito
+Damiano
+Giorgio Scarampi
+Martino Alfieri
+Marzano Oliveto
+Paolo Solbrito
 Scurzolengo
 Serole
 Sessame
@@ -299,7 +299,7 @@ Vesime
 Viale
 Viarigi
 Vigliano
-Villa San Secondo
+Villa Secondo
 Villafranca
 Villanova
 Vinchio
@@ -317,7 +317,7 @@ Campiglia Cervo
 Candelo
 Caprile
 Casapinta
-Castelletto Cervo
+Cervo
 Cavaglià
 Cerreto Castello
 Cerrione
@@ -355,7 +355,7 @@ Quittengo
 Sagliano Micca
 Sala Biellese
 Salussola
-San Paolo Cervo
+Paolo Cervo
 Sandigliano
 Selve Marcone
 Soprana
@@ -369,8 +369,8 @@ Torrazzo
 Trivero
 Valdengo
 Vallanzengo
-Valle Mosso
-Valle San Nicolao
+Mosso
+Nicolao
 Veglio
 Verrone
 Vigliano Biellese
@@ -403,7 +403,7 @@ Benevello
 Bergolo
 Bernezzo
 Bonvicino
-Borgo San Dalmazzo
+Borgo Dalmazzo
 Borgomale
 Bosia
 Bossolasco
@@ -428,12 +428,12 @@ Casalgrasso
 Castagnito
 Châteaudauphin
 Castellar
-Castelletto Stura
-Castelletto Uzzone
+Stura
+Uzzone
 Castellinaldo
 Castellino Tanaro
 Castelmagno
-Castelnuovo di Ceva
+Ceva
 Castiglione Falletto
 Castiglione Tinella
 Castino
@@ -491,7 +491,6 @@ Lesegno
 Levice
 Limone Piemonte
 Lisio
-
 Macra
 Magliano Alfieri
 Magliano Alpi
@@ -544,7 +543,7 @@ Paroldo
 Perletto
 Perlo
 Peveragno
-Pezzolo Valle Uzzone
+Pezzolo Uzzone
 Pianfei
 Piasco
 Pietraporzio
@@ -580,18 +579,18 @@ Rodello
 Rossana
 Ruffia
 Sale delle Langhe
-Sale San Giovanni
+Sale Giovanni
 Saliceto
 Salmour
 Saluzzo
 Sambuco
 Sampeyre
-San Benedetto Belbo
-San Damiano Macra
-San Michele Mondovì
+Benedetto Belbo
+Damiano Macra
+Michele Mondovì
 Sanfront
 Sanfrè
-Sant'Albano Stura
+Albano Stura
 Santa Vittoria d'Alba
 Santo Stefano Belbo
 Santo Stefano Roero
@@ -599,7 +598,7 @@ Savigliano
 Scagnello
 Scarnafigi
 Serralunga d'Alba
-Serravalle Langhe
+SerraLanghe
 Sinio
 Somano
 Sommariva del Bosco
@@ -608,7 +607,7 @@ Stroppo
 Tarantasca
 Torre Bormida
 Torre Mondovì
-Torre San Giorgio
+Torre Giorgio
 Torresina
 Treiso
 Trezzo Tinella
@@ -627,7 +626,7 @@ Vignolo
 Villafalletto
 Villanova Mondovì
 Villanova Solaro
-Villar San Costanzo
+Villar Costanzo
 Vinadio
 Viola
 Vottignasco
@@ -654,7 +653,7 @@ Casaleggio Novara
 Casalino
 Casalvolone
 Castellazzo Novarese
-Castelletto sopra Ticino
+sopra Ticino
 Cavaglietto
 Cavaglio d'Agogna
 Cavallirio
@@ -689,7 +688,7 @@ Nibbiola
 Novare
 Oleggio
 Oleggio Castello
-Orta San Giulio
+Orta Giulio
 Paruzzaro
 Pella
 Pettenasco
@@ -700,9 +699,9 @@ Prato Sesia
 Recetto
 Romagnano Sesia
 Romentino
-San Maurizio d'Opaglio
-San Nazzaro Sesia
-San Pietro Mosezzo
+Maurizio d'Opaglio
+Nazzaro Sesia
+Pietro Mosezzo
 Sillavengo
 Sizzano
 Soriso
@@ -738,7 +737,6 @@ Baldissero Torinese
 Balme
 Banchette
 Barbania
-Bardonnèche
 Barone Canavese
 Beinasco
 Bibiana
@@ -783,7 +781,7 @@ Caselle Torinese
 Castagneto Po
 Castagnole Piemonte
 Castellamonte
-Castelnuovo Nigra
+Nigra
 Castiglione Torinese
 Cavagnolo
 Cavour
@@ -797,7 +795,7 @@ Chianocco
 Chiaverano
 Chieri
 Chiesanuova
-Chiusa di San Michele
+Chiusa di Michele
 Chivasso
 Ciconio
 Cintano
@@ -854,7 +852,7 @@ Lombardore
 Lombriasco
 Loranzè
 Lugnacco
-Luserna San Giovanni
+Luserna Giovanni
 Lusernetta
 Lusigliè
 Macello
@@ -945,27 +943,27 @@ Salbertrand
 Salerano Canavese
 Salza di Pinerolo
 Samone
-San Benigno Canavese
-San Carlo Canavese
-San Colombano Belmonte
-San Didero
-San Francesco al Campo
-San Germano Chisone
-San Gillio
-San Giorgio Canavese
-San Giorio di Susa
-San Giusto Canavese
-San Martino Canavese
-San Maurizio Canavese
-San Mauro Torinese
-San Pietro Val Lemina
-San Ponso
-San Raffaele Cimena
-San Sebastiano da Po
-San Secondo di Pinerolo
+Benigno Canavese
+Carlo Canavese
+Colombano Belmonte
+Didero
+Francesco al Campo
+Germano Chisone
+Gillio
+Giorgio Canavese
+Giorio di Susa
+Giusto Canavese
+Martino Canavese
+Maurizio Canavese
+Mauro Torinese
+Pietro Val Lemina
+Ponso
+Raffaele Cimena
+Sebastiano da Po
+Secondo di Pinerolo
 Sangano
-Sant'Ambrogio di Torino
-Sant'Antonino di Susa
+Ambrogio di Torino
+Antonino di Susa
 Santena
 Sauze d'Oulx
 Sauze di Cesana
@@ -1081,7 +1079,7 @@ Prarolo
 Quarona
 Quinto Vercellese
 Rassa
-Rima San Giuseppe
+Rima Giuseppe
 Rimasco
 Rimella
 Riva Valdobbia
@@ -1094,12 +1092,12 @@ Sabbia
 Salasco
 Sali Vercellese
 Saluggia
-San Germano Vercellese
-San Giacomo Vercellese
+Germano Vercellese
+Giacomo Vercellese
 Santhià
 Scopa
 Scopello
-Serravalle Sesia
+SerraSesia
 Stroppiana
 Tricerro
 Trino
@@ -1137,7 +1135,7 @@ Castelvetere sul Calore
 Cervinara
 Cesinali
 Chianche
-Chiusano di San Domenico
+Chiusano di Domenico
 Contrada
 Conza della Campania
 Domicella
@@ -1186,20 +1184,20 @@ Prata di Principato Ultra
 Pratola Serra
 Quadrelle
 Quindici
-Rocca San Felice
+Rocca Felice
 Roccabascerana
 Rotondi
 Salza Irpina
-San Mango sul Calore
-San Martino Valle Caudina
-San Michele di Serino
-San Nicola Baronia
-San Potito Ultra
-San Sossio Baronia
-Sant'Andrea di Conza
-Sant'Angelo a Scala
-Sant'Angelo all'Esca
-Sant'Angelo dei Lombardi
+Mango sul Calore
+Martino Caudina
+Michele di Serino
+Nicola Baronia
+Potito Ultra
+Sossio Baronia
+Andrea di Conza
+Angelo a Scala
+Angelo all'Esca
+Angelo dei Lombardi
 Santa Lucia di Serino
 Santa Paolina
 Santo Stefano del Sole
@@ -1284,21 +1282,21 @@ Ponte
 Pontelandolfo
 Puglianello
 Reino
-San Bartolomeo in Galdo
-San Giorgio La Molara
-San Giorgio del Sannio
-San Leucio del Sannio
-San Lorenzello
-San Lorenzo Maggiore
-San Lupo
-San Marco dei Cavoti
-San Martino Sannita
-San Nazzaro
-San Nicola Manfredi
-San Salvatore Telesino
-Sant'Agata de Goti
-Sant'Angelo a Cupolo
-Sant'Arcangelo Trimonte
+Bartolomeo in Galdo
+Giorgio La Molara
+Giorgio del Sannio
+Leucio del Sannio
+Lorenzello
+Lorenzo Maggiore
+Lupo
+Marco dei Cavoti
+Martino Sannita
+Nazzaro
+Nicola Manfredi
+Salvatore Telesino
+Agata de Goti
+Angelo a Cupolo
+Arcangelo Trimonte
 Santa Croce del Sannio
 Sassinoro
 Solopaca
@@ -1382,21 +1380,21 @@ Roccamonfina
 Roccaromana
 Rocchetta e Croce
 Ruviano
-San Cipriano d'Aversa
-San Felice a Cancello
-San Gregorio Matese
-San Marcellino
-San Marco Evangelista
-San Nicola la Strada
-San Pietro Infine
-San Potito Sannitico
-San Prisco
-San Tammaro
-Sant'Angelo d'Alife
-Sant'Arpino
-Santa Maria Capua Vetere
-Santa Maria a Vico
-Santa Maria la Fossa
+Cipriano d'Aversa
+Felice a Cancello
+Gregorio Matese
+Marcellino
+Marco Evangelista
+Nicola la Strada
+Pietro Infine
+Potito Sannitico
+Prisco
+Tammaro
+Angelo d'Alife
+Arpino
+Capua Vetere
+Vico
+la Fossa
 Sessa Aurunca
 Sparanise
 Succivo
@@ -1405,8 +1403,8 @@ Teverola
 Tora e Piccilli
 Trentola-Ducenta
 Vairano Patenora
-Valle Agricola
-Valle di Maddaloni
+Agricola
+di Maddaloni
 Villa Literno
 Villa di Briano
 Vitulazio
@@ -1473,17 +1471,17 @@ Pouzzoles
 Procida
 Qualiano
 Quarto
-San Gennaro Vesuviano
-San Giorgio a Cremano
-San Giuseppe Vesuviano
-San Paolo Bel Sito
-San Sebastiano al Vesuvio
-San Vitaliano
-Sant'Agnello
-Sant'Anastasia
-Sant'Antimo
-Sant'Antonio Abate
-Santa Maria la Carità
+Gennaro Vesuviano
+Giorgio a Cremano
+Giuseppe Vesuviano
+Paolo Bel Sito
+Sebastiano al Vesuvio
+Vitaliano
+Agnello
+Anastasia
+Antimo
+Antonio Abate
+la Carità
 Saviano
 Scisciano
 Serrara Fontana

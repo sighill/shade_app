@@ -1,0 +1,8 @@
+######################################################################
+Début du nettoyage du fichier
+    ###################################
+    Début de la fonction OutFileCreate
+        Le header sera: HEADER;AssetPlace;Ostrie, Thémésie, Lagashein
+
+        Création du fichier 018_out
+        Création du fichier 018_log
