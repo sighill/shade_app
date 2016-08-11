@@ -31,7 +31,7 @@ class Archetype(models.Model):
     # Attributs
     gid = models.AutoField(primary_key = True , db_index = True)
     img_id = models.CharField(max_length = 255 , null = True)
-    img = models.ImageField( blank = True , null = True)
+    img = models.ImageField( upload_to = 'arach/static/img' ,blank = True , null = True) # 
     description = models.CharField(max_length = 2000 , null = True)
     name = models.CharField(max_length = 255)
     age = models.PositiveIntegerField(default = 20)

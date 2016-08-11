@@ -9,8 +9,12 @@
         <link rel="stylesheet" type="text/css" href="{% static 'arach/style.css' %}" />
     </head>
 
+    <header>
+        <a class="header_item" href="#">Menu personnages (work in progress)</a>
+        <a class="header_item" href="/arach">Retour à l'index</a> 
+    </header>
+    
     <body>
-    <p class="wip">work in progress - don't panic</p>
         <div id="wrapper">
 
             <div class="block">
@@ -30,28 +34,8 @@
                 <h2>Inventaire</h2>
                 <ul>{% for item in stuff %} <li>{{item}}</li> {% endfor %}</ul>
             </div> <!-- block end -->
-        
-          <input type="checkbox" id="menu" name="menu" class="menu-checkbox">
-          <div class="menu">
-            <label class="menu-toggle" for="menu"><span>Toggle</span></label>
-            <ul>
-                <li>      
-                    <label for="menu-3">Personnages</label>
-                    <input type="checkbox" id="menu-3" name="menu-3" class="menu-checkbox">
-                    <div class="menu">
-                        <label class="menu-toggle" for="menu-3"><span>Toggle</span></label>
-                            <ul>
-                                {% for character in content %}
-                                    <li>
-                                        <a href="{{character.pk}}">{{character.name}}</a>
-                                    </li>
-                                {% endfor %}
-                            </ul>
-                    </div>
-                    <a href="/arach">Retour à l'index</a>
-                </li>
-            </ul>
-          </div> <!-- Menu end --> 
+
         </div><!-- wrapper end -->
     </body>
+
 </html>

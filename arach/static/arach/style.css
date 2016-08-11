@@ -12,12 +12,24 @@ body {
 @media (min-width: 1000px){
   :root {
     font-size: 14px;  /*above 800px */
+
   }
 }
 @media (max-width: 1000px){
   :root {
     font-size: 3.5vw;
   }
+}
+
+header {
+  height: 80px;
+  display: flex;
+  margin: 20px auto;
+  flex-direction: row;
+  border-radius: 10px;
+  text-align: left;
+  background-color: #46585a; /* last used : 46585a */
+  max-width: 1200px; 
 }
 
 img{
@@ -38,7 +50,7 @@ table, th, td {
     text-align: center;
 }
         
-h2 {
+h2, h4 {
   padding-bottom: 5px;
   text-align: center;
   border-top: 1px solid black;
@@ -58,6 +70,10 @@ ul {
     list-style-type: none;
 }
 
+.header_item{
+  margin: auto;
+}
+
 .block { 
   display: flex;
   margin: 20px auto;
@@ -66,6 +82,16 @@ ul {
   text-align: left;
   background-color: #46585a; /* last used : 46585a */
   max-width: 1200px;  
+}
+
+.container { 
+  display: flex;
+  flex-flow: row wrap;
+  margin: 40px auto;
+  border-radius: 10px;
+  text-align: left;
+  background-color: #46585a; /* last used : 46585a */
+  max-width: 1200px;
 }
 
 .wip {
@@ -83,96 +109,16 @@ ul {
   max-width: 400px;
 }
 
+.avatar_index{
+    display: block;
+  margin: 10px auto;
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+  max-width: 200px;
+}
+
 #wrapper {
   margin:auto;
-}
-
-/* -------------- MENU STYLE -------------- */
-label {
-  cursor: pointer;
-}
-label:focus {
-  outline: none;
-}
-
-.menu {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #B0BEBF; /*last used : fff */
-  width: 240px;
-  height: 100%;
-  transform: translate3d(-240px, 0, 0);
-  transition: transform 0.20s;
-  font-size: 14px;
-}
-.menu label.menu-toggle {
-  position: absolute;
-  right: -60px;
-  width: 60px;
-  height: 60px;
-  line-height: 0px;
-  display: block;
-  padding: 0;
-  text-indent: -9999px;
-  background: #fff url(https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png) 50% 50%/25px 25px no-repeat;
-}
-.menu ul li > label {
-  background: url(https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-arrow-right-b-128.png) 95% 50%/16px 16px no-repeat;
-}
-.menu ul li a, .menu ul li label {
-  display: block;
-  text-align: center;
-  padding: 0 20px;
-  line-height: 60px;
-  text-decoration: none;
-  color: #000;
-}
-.menu ul li a:hover, .menu ul li label:hover {
-  color: #666;
-}
-
-/* hide inputs */
-.menu-checkbox {
-  display: none;
-}
-
-/* hide navigation icon for sublabels */
-.menu .menu label.menu-toggle {
-  background: none;
-}
-
-/* fade in checked menu */
-.menu-checkbox:checked + .menu {
-  transform: translate3d(0, 0, 0);
-}
-
-#info {
-  display: table;
-  background: rgba(0, 0, 0, 0.4);
-  height: 100%;
-  width: 100%;
-}
-#info #info-content {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  text-transform: uppercase;
-  color: #fff;
-  font-size: 12px;
-}
-#info #info-content h1 {
-  color: #fff;
-  border: 3px solid #fff;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.1);
-  font-size: 22px;
-  font-weight: normal;
-  padding: 20px;
-  margin: 10px;
-  display: inline-block;
-}
-#info #info-content h1 strong {
-  display: block;
-  font-size: 26px;
+  min-height: calc(100vh - 40px);
 }
