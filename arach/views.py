@@ -7,7 +7,9 @@ from .models import Archetype
 def arachIndex(request):
     characters = Archetype.objects.all()
     template = loader.get_template('arach/index.html')
-    context = {'content':characters}
+    context = { 'content':characters ,
+                'main_img': 'img/main.jpg'
+        }
     return HttpResponse(template.render(context , request ))
 
 def arachDisplay(request , character_gid):
@@ -17,6 +19,7 @@ def arachDisplay(request , character_gid):
     attribute_list = ['Puissance','Vigueur','Agilité','Perception','Charisme','Astuce','Volonté','Intelligence','Connaissance']
     cast_verbose = character.cast_choice[character.cast-1][1]
     context = { 'content':characters ,
+                'avatar': character.img ,
                 'description': character.description ,
                 'name': character.name ,
                 'cast': 'caste des {}'.format(cast_verbose) ,

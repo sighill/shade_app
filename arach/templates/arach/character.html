@@ -10,21 +10,25 @@
     </head>
 
     <body>
+    <p class="wip">work in progress - don't panic</p>
         <div id="wrapper">
+
             <div class="block">
-                
                 <h2>
                     {{name}} : {{cast}}
                 </h2>
                 {% load staticfiles %}
-                <img class ="avatar_img" src="{% static 'img/001.jpg' %}" alt = 'profile pic'/>
-                
-                <h4>Description :</h4>
-                <p>{{description}}</p>
-                
-                <h4>Inventaire :</h4>
-                    <ul>{% for item in stuff %} <li>{{item}}</li> {% endfor %}</ul>
+                <img class ="avatar_img" src="{% static avatar %}" alt = 'profile pic'/>
+            </div> <!-- block end -->  
 
+            <div class="block">    
+                <h2>Description</h2>
+                <p>{{description}}</p>
+            </div> <!-- block end -->
+
+            <div class="block">
+                <h2>Inventaire</h2>
+                <ul>{% for item in stuff %} <li>{{item}}</li> {% endfor %}</ul>
             </div> <!-- block end -->
         
           <input type="checkbox" id="menu" name="menu" class="menu-checkbox">
