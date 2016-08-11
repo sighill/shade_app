@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="ROBOTS" content="NONE" />
+        <title>Tests Voxclam</title>
+        
+        {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{% static 'arach/style.css' %}" />
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <div class="block">
+                
+                <h2>
+                    {{name}} : {{cast}}
+                </h2>
+                {% load staticfiles %}
+                <img class ="avatar_img" src="{% static 'img/001.jpg' %}" alt = 'profile pic'/>
+                
+                <h4>Description :</h4>
+                <p>{{description}}</p>
+                
+                <h4>Inventaire :</h4>
+                    <ul>{% for item in stuff %} <li>{{item}}</li> {% endfor %}</ul>
+
+            </div> <!-- block end -->
+        
+          <input type="checkbox" id="menu" name="menu" class="menu-checkbox">
+          <div class="menu">
+            <label class="menu-toggle" for="menu"><span>Toggle</span></label>
+            <ul>
+                <li>      
+                    <label for="menu-3">Personnages</label>
+                    <input type="checkbox" id="menu-3" name="menu-3" class="menu-checkbox">
+                    <div class="menu">
+                        <label class="menu-toggle" for="menu-3"><span>Toggle</span></label>
+                            <ul>
+                                {% for character in content %}
+                                    <li>
+                                        <a href="{{character.pk}}">{{character.name}}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                    </div>
+                    <a href="/arach">Retour à l'index</a>
+                </li>
+            </ul>
+          </div> <!-- Menu end --> 
+        </div><!-- wrapper end -->
+    </body>
+</html>

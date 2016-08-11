@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="ROBOTS" content="NONE" />
+        <title>Tests Voxclam</title>
+        
+        {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{% static 'arach/style.css' %}" />
+    </head>
+
+    <body>
+
+        <div id="wrapper">
+        <div class="block">
+            <h2>
+                Arach - Affichage des personnages
+            </h2>
+            <p>
+                Choisissez un personnage à afficher dans le menu latéral.
+            </p>
+        </div> <!-- block end -->
+
+        <input type="checkbox" id="menu" name="menu" class="menu-checkbox">
+        <div class="menu">
+            <label class="menu-toggle" for="menu"><span>Toggle</span></label>
+            <ul>
+              <li>      
+                <label for="menu-3">Personnages</label>
+                <input type="checkbox" id="menu-3" name="menu-3" class="menu-checkbox">
+                <div class="menu">
+                  <label class="menu-toggle" for="menu-3"><span>Toggle</span></label>
+                  <ul>
+                    {% for character in content %}
+                        <li>
+                            <a href="character/{{character.pk}}">{{character.name}}</a>
+                        </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div> <!-- wrapper end -->
+
+    </body>
+</html>
