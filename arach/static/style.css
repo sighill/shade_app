@@ -72,16 +72,18 @@ ul {
 
 .block { 
   display: flex;
-  flex-shrink: 0;
+  margin: 20px auto;
   flex-direction: column;
   border-radius: 10px;
   text-align: left;
   background-color: #46585a; /* last used : 46585a */
+  max-width: 1200px;  
 }
 
 .container { 
   display: flex;
   flex-flow: row wrap;
+  margin: 40px auto;
   border-radius: 10px;
   text-align: left;
   background-color: #46585a; /* last used : 46585a */

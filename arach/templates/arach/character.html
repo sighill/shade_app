@@ -6,16 +6,24 @@
         <title>Tests Voxclam</title>
         
         {% load staticfiles %}
-        <link rel="stylesheet" type="text/css" href="{% static 'arach/style.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static style %}" />
     </head>
 
     <header>
-        <a class="header_item" href="#">Menu personnages (work in progress)</a>
-        <a class="header_item" href="/arach">Retour à l'index</a> 
+        <div class="block" id="char_dropdown">
+            <p>Navigation</p>
+            <div id="char_dropdown_content">
+                <a href="/arach"><h4>Retour à l'index</h4></a>
+                {% for char in content %}
+                <a href="/arach/character/{{char.pk}}"><h4>{{char.name}}</h4></a>
+                {% endfor %}
+            </div>
+        </div>
+
     </header>
     
     <body>
-        <div id="wrapper">
+        <div class="wrapper">
 
             <div class="block">
                 <h2>

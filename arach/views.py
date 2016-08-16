@@ -8,7 +8,8 @@ def arachIndex(request):
     characters = Archetype.objects.all()
     template = loader.get_template('arach/index.html')
     context = { 'content':characters ,
-                'main_img': 'img/main.jpg'
+                'main_img': 'main.jpg' ,
+                'style': 'style.css'
         }
     return HttpResponse(template.render(context , request ))
 
@@ -25,6 +26,7 @@ def arachDisplay(request , character_gid):
                 'cast': 'caste des {}'.format(cast_verbose) ,
                 'attributes':character.attributes.split(',') ,
                 'stuff': character.stuff.split(',') ,
+                'style': 'style.css'
                 }
     return HttpResponse(template.render(context , request ))
 
