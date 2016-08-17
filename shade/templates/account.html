@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="ROBOTS" content="NONE" />
-        <title>Vaste :: Accueil</title>
+        <title>Vaste :: Gestion de compte</title>
         
         {% load staticfiles %}
         <link rel="stylesheet" type="text/css" href="{% static style %}" />
@@ -15,15 +15,15 @@
         
             <div class="block">
                 <h2>
-                    Vaste.fr :: Accueil
+                    Vaste.fr :: Gestion de compte
                 </h2>
             </div> <!-- block end -->
-
+            
             <div class="block">
-                <h2><a href="login">Se connecter</a></h2>
-                <br>
-                <h2><a href="arach">Voir les personnages</a></h2>
-            </div>
+                <h2><a href="/login">Se connecter</a></h2>
+                <h2><a href="/logout">Se déconnecter</a></h2>
+                <h2><a href="/password_change">Changer de mot de passe</a></h2>
+            </div> <!-- block end -->
 
         </div> <!-- wrapper end -->
     </body>

@@ -9,6 +9,17 @@
         <link rel="stylesheet" type="text/css" href="{% static style %}" />
     </head>
 
+    <header>
+        <div class="block" id="char_dropdown">
+            <p>Navigation</p>
+            <div id="char_dropdown_content">
+                <a href="/"><h4>Accueil</h4></a>
+                <a href="/login"><h4>Login</h4></a>
+            </div>
+        </div>
+
+    </header>
+
     <body>
 
         <div id="wrapper">
@@ -17,8 +28,7 @@
                 <h2>
                     Arach - Affichage des personnages
                 </h2>
-                {% load staticfiles %}
-                <img href="http://www.tituslunter.com/" src="{% static main_img %}" alt = 'Art by Titus Lunter'/>
+
                 <p>
                     Choisissez un personnage à afficher.
                 </p>
