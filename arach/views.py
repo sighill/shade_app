@@ -4,6 +4,11 @@ from django.template import loader
 from .models import Archetype
 # Create your views here.
 
+def arachHome(request):
+    context={'style': 'style.css'}
+    template = loader.get_template('arach/home.html')
+    return HttpResponse(template.render(context,request))
+
 def arachIndex(request):
     characters = Archetype.objects.all()
     template = loader.get_template('arach/index.html')
