@@ -10,44 +10,38 @@
         <link rel="favicon" href="{%  static favicon %}">
     </head>
 
-    <header>
+    <body>
 
-        <div class="block" id="char_dropdown">
-            <p>Navigation</p>
-            <div id="char_dropdown_content">
-                <h4>{{ current_user |safe }}</h4>
-                <a href="/"><h4>Accueil</h4></a>
-                <h3>Personnages :</h3>
-                {% for char in content %}
-                <a href="/arach/character/{{char.pk}}"><h4>{{char.name}}</h4></a>
-                {% endfor %}
+        <div id="wrapper">
+            <div class="container">
+                <div class="block" id="char_dropdown">
+                    <h3>Navigation</h3>
+                    <div id="char_dropdown_content">
+                        <a href="/"><h4>Accueil</h4></a>
+                        <a href="/arach"><h4>Index des personnages</h4></a>
+                        <h4>{{ current_user |safe }}</h4>
+                        <h3>Personnages :</h3>
+                        {% for char in content %}
+                        <a href="/arach/character/{{char.pk}}"><h4>{{char.name}}</h4></a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+  
+            <div class="container">
+                <div class="block">
+                    <h2>
+                        {{name}} : {{cast}}
+                    </h2>
+                    {% load staticfiles %}
+                    <img class ="avatar_img" src="{% static avatar %}" alt = 'profile pic'/>   
+                    <h2>Description</h2>
+                    <p>{{description}}</p>
+                    <h2>Inventaire</h2>
+                    <ul>{% for item in stuff %} <li>{{item}}</li> {% endfor %}</ul>
+                </div> <!-- block end -->
             </div>
         </div>
-
-    </header>
-    
-    <body>
-        <div class="wrapper">
-
-            <div class="block">
-                <h2>
-                    {{name}} : {{cast}}
-                </h2>
-                {% load staticfiles %}
-                <img class ="avatar_img" src="{% static avatar %}" alt = 'profile pic'/>
-            </div> <!-- block end -->  
-
-            <div class="block">    
-                <h2>Description</h2>
-                <p>{{description}}</p>
-            </div> <!-- block end -->
-
-            <div class="block">
-                <h2>Inventaire</h2>
-                <ul>{% for item in stuff %} <li>{{item}}</li> {% endfor %}</ul>
-            </div> <!-- block end -->
-
-        </div><!-- wrapper end -->
     </body>
 
 </html>
