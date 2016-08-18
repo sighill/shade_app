@@ -34,24 +34,16 @@ header {
 
 img{
   display: block;
+  border-radius: 10px;
   margin: 10px auto;
   border-width: 2px;
   border-style: solid;
   border-color: black;
-  width: 100%;
-  max-width: 600px;
-}
-
-table, th, td {
-    border-width: 1px;
-    border-style: solid;
-    border-color: black;
-    border-collapse: collapse;
-    text-align: center;
+  max-width: 1200px;
 }
         
-h2, h4 {
-  padding-bottom: 5px;
+h2, h3, h4 {
+  padding: 5px;
   text-align: center;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
@@ -68,6 +60,10 @@ p {
 ul {
     padding-bottom: 10px;
     list-style-type: none;
+}
+
+.mainpage_link_img{
+  max-height: 80vw;
 }
 
 .block { 
