@@ -14,7 +14,8 @@ def arachIndex(request):
     context = { 'content':characters ,
                 'style': 'style.css',
                 'current_user': current_user,
-                'favicon': 'favicon.ico'
+                'favicon': 'favicon.ico',
+                'home': 'home_1.png'
             }
     return HttpResponse(template.render(context , request ))
 
